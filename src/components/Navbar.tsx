@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Box, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link as RouterLink, /*useLocation*/ } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 
 const navLinks = [
   { label: 'Home', path: '/' },
