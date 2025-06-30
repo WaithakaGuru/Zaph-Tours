@@ -3,6 +3,8 @@ import Herosection from "../components/Herosection";
 import {Typography, Box, Container} from '@mui/material';
 import destinations from "../utils/Destinations";
 import DestinationCard from "../components/DestinationCard";
+import TestimonialCard from "../components/TestimonialCard";
+import testimonials from "../utils/Testimonials";
 
 function Homepage() {
   return (
@@ -42,6 +44,11 @@ function Homepage() {
             }
             </Box>
         </Container>
+
+        {/* Testimonials from our past travellors */}
+        {
+            testimonials.map((testimony,idx) =><TestimonialCard {...testimony} key={idx}/>)
+        }
       </Box>
     </>
   );

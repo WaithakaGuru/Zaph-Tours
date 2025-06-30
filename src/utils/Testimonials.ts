@@ -1,6 +1,6 @@
 const testimonials = [
   {
-    name: 'Alice W.',
+    name: 'Waithaka A.',
     quote: 'The safari was a dream come true! Zaph Tours took care of every detail.'
   },
   {
@@ -8,7 +8,7 @@ const testimonials = [
     quote: 'Our family adventure was unforgettable. Highly recommend Zaph Tours!'
   },
   {
-    name: 'Fatma S.',
+    name: 'Kefini S.',
     quote: 'Professional guides and amazing destinations. Will book again!'
   },
   {
