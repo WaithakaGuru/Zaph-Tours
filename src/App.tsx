@@ -5,7 +5,6 @@ import "./styles/App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Homepage from "./pages/homepage";
-import { Css } from "@mui/icons-material";
 
 function App() {
   return (

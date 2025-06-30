@@ -1,5 +1,5 @@
 import { Typography, Box, Button, Grid } from "@mui/material";
-import {grey} from '@mui/material/colors'
+import {grey, orange} from '@mui/material/colors'
 
 function Herosection() {
   return (
@@ -21,14 +21,20 @@ function Herosection() {
           backgroundRepeat: "no-repeat",
         }}
       >
+        <Typography variant="h2" align="center" fontWeight={700}
+        color="#fff" gutterBottom
+        sx={{textShadow: '0 0 5px #333'}}>
+            Zaph Tours
+        </Typography>
+
         <Typography
-          variant="h2"
-          fontWeight={800}
+          variant="body2"
+          fontWeight={600}
           textTransform={"capitalize"}
-          fontSize={"3rem"}
+          fontSize={"2rem"}
           align="center"
           gutterBottom
-          sx={{color: grey[900], textShadow: '0 0 3px darkorange'}}
+          sx={{color: grey[900]}}
         >
           Best safaris and adventures
         </Typography>
@@ -36,12 +42,12 @@ function Herosection() {
           variant="contained"
           size="large"
           href="#"
-          color="secondary"
         //   disabled
           disableRipple
           sx={{ minWidth: "20%", mx: "auto",
+            bgcolor: orange[700], color: 'InfoText',
              my: 1, py:2, mt: 7, '&:hover': {
-                backgroundColor: 'orange'
+                backgroundColor: orange[400]
              },
              '&:active' : {
                 scale: '.95' 
@@ -56,7 +62,7 @@ function Herosection() {
             <Typography variant="h3" textTransform={'uppercase'}
             fontWeight={700} fontSize={"1.6rem"}
             >
-                Explore more
+                Explore destinations
             </Typography>
         </Button>
       </Box>
