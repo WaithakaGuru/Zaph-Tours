@@ -1,4 +1,4 @@
-import {Card, CardContent, CardMedia, Typography} from '@mui/material'
+import {Card, CardContent, CardMedia, Stack, Typography} from '@mui/material'
 
 
 function DestinationCard({...destinationInfo}) {
@@ -6,18 +6,20 @@ function DestinationCard({...destinationInfo}) {
     <Card>
         <CardMedia component='img' image={destinationInfo.image} alt={destinationInfo.name} height={'200px'}/>
         <CardContent>
-            <Typography variant='h4'>
+            <Typography variant='h6' fontWeight={600} align='center' gutterBottom>
                 {destinationInfo.name}
             </Typography>
-            <Typography variant='subtitle1' align='center'>
+            <Typography variant='subtitle1' align='center' fontSize={'1rem'} color='text.secondary'>
                 {destinationInfo.description}
             </Typography>
-            <Typography variant='caption'>
-                {destinationInfo.groupPrice}
-            </Typography>
-            <Typography variant='caption'>
-                {destinationInfo.individualPrice}
-            </Typography>
+            <Stack direction={{xs: 'column', md:"row"}} gap={4} justifyContent={'center'}>
+                <Typography variant='caption' color="primary" fontWeight={600} fontSize={'.85rem'}>
+                    Group: {destinationInfo.groupPrice}
+                </Typography>
+                <Typography variant='caption' color="secondary" fontWeight={600} fontSize={'.85rem'}>
+                    Solo: {destinationInfo.individualPrice}
+                </Typography>
+            </Stack>
         </CardContent>
     </Card>
   )
