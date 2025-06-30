@@ -4,10 +4,19 @@ import {Card, CardContent, CardMedia, Typography} from '@mui/material'
 function DestinationCard({...destinationInfo}) {
   return (
     <Card>
-        <CardMedia component='img' image={destinationInfo.path} alt={destinationInfo.title} height={'200px'}/>
+        <CardMedia component='img' image={destinationInfo.image} alt={destinationInfo.name} height={'200px'}/>
         <CardContent>
             <Typography variant='h4'>
-                ehwirjfnw
+                {destinationInfo.name}
+            </Typography>
+            <Typography variant='subtitle1' align='center'>
+                {destinationInfo.description}
+            </Typography>
+            <Typography variant='caption'>
+                {destinationInfo.groupPrice}
+            </Typography>
+            <Typography variant='caption'>
+                {destinationInfo.individualPrice}
             </Typography>
         </CardContent>
     </Card>

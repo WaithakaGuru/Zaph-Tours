@@ -1,6 +1,8 @@
 import { grey} from "@mui/material/colors";
 import Herosection from "../components/Herosection";
-import {Typography, Box, Grid, Container} from '@mui/material';
+import {Typography, Box, Container} from '@mui/material';
+import destinations from "../utils/Destinations";
+import DestinationCard from "../components/DestinationCard";
 
 function Homepage() {
   return (
@@ -30,11 +32,15 @@ function Homepage() {
             sx={{mt: 3, color: grey[800], fontSize: '2.6rem', fontWeight: 600 }}>
                 Featured Destinations
             </Typography>
-            <Grid container spacing={4}>
-                {/* <Grid item > 
-                    <Typography variant="subtitle1">this and that</Typography>
-                </Grid> */}
-            </Grid>
+            <Box component={'div'} display={'grid'}
+             gridTemplateColumns={{ xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr'}}
+             sx={{gap:2}}>
+               {
+                destinations.map((destination) => (
+                    <DestinationCard {...destination} key={destination.name}/>
+                ))
+            }
+            </Box>
         </Container>
       </Box>
     </>

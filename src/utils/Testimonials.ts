@@ -16,4 +16,4 @@ const testimonials = [
     quote: 'The best travel experience I have ever had. Thank you Zaph Tours!'
   },
 ];
- export default testimonials;
+export default testimonials;

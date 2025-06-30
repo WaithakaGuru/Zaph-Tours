@@ -9,7 +9,7 @@ function Herosection() {
         component={"section"}
         justifyContent={"center"}
         width={"100%"}
-        minHeight={"20rem"}
+        minHeight={"25rem"}
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -58,7 +58,7 @@ function Herosection() {
             }}
         >
             <Typography variant="h3" textTransform={'uppercase'}
-            fontWeight={700} fontSize={"1.6rem"}
+            fontWeight={600} fontSize={"1.3rem"}
             >
                 Explore destinations
             </Typography>
