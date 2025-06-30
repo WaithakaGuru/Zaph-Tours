@@ -1,11 +1,9 @@
-import { Typography, Box, Button, Grid } from "@mui/material";
+import { Typography, Box, Button, Stack } from "@mui/material";
 import {grey, orange} from '@mui/material/colors'
 
 function Herosection() {
   return (
-    <Grid
-      container
-      sx={{ sm: 12, width: "100%" }}
+    <Stack sx={{ sm: 12, width: "100%" }}
     >
       <Box
         component={"section"}
@@ -66,7 +64,7 @@ function Herosection() {
             </Typography>
         </Button>
       </Box>
-    </Grid>
+    </Stack>
   );
 }
 

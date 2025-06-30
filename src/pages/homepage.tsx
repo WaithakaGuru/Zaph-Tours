@@ -1,16 +1,17 @@
+import { grey} from "@mui/material/colors";
 import Herosection from "../components/Herosection";
-import {Typography, Box, Container, Grid} from '@mui/material';
+import {Typography, Box, Grid, Container} from '@mui/material';
 
 function Homepage() {
   return (
-    <Box component={'main'}>
+    <>
       <Herosection />
       {/* The About Section */}
-      <Grid sx={{bgcolor: '#f9f9f9', width: '100%', px: 6}}>
+      <Box component={'main'} sx={{bgcolor: '#f9f9f9', width: '100%', px: 6}}>
         <Box component={'section'} display={'flex'} flexDirection={'column'} alignItems={'center'}>
             <Typography variant="h2" gutterBottom fontSize={'2.5rem'}
-             fontWeight={600} textTransform={'capitalize'}
-             sx={{my: 3}}>
+            fontWeight={600} textTransform={'capitalize'}
+            sx={{my: 3}}>
                 We are the best
             </Typography>
             <Typography variant="body1" align="center" maxWidth={'700px'} gutterBottom>
@@ -21,20 +22,22 @@ function Homepage() {
                 <Typography variant="h6" align="center">Our mission is to make you dream adventure a REALITY!</Typography>
             </Typography>
         </Box>
-        
+            
         {/* The featured destinations section */}
-        <Box component={'section'}>
+        <Container sx={{px: 6}}>
             <Typography variant="h3" align="center"
-             gutterBottom fontSize={'2.6rem'} fontWeight={600}
-             color="secondary"
-             sx={{mt: 3}}>
+            gutterBottom
+            sx={{mt: 3, color: grey[800], fontSize: '2.6rem', fontWeight: 600 }}>
                 Featured Destinations
             </Typography>
-            <Grid container sx={{xs: 12, md: 6, lg: 4}}>
+            <Grid container spacing={4}>
+                <Grid item > 
+                    <Typography variant="subtitle1">this and that</Typography>
+                </Grid>
             </Grid>
-        </Box>
-      </Grid>
+        </Container>
       </Box>
+    </>
   );
 }
 

@@ -1,11 +1,16 @@
-import {Card, CardContent, CardMedia, Typography} from '@mui/material'
+import {Card, CardContent, CardMedia, Grid, Typography} from '@mui/material'
 
 
-function DestinationCard() {
+function DestinationCard({...destinationInfo}) {
   return (
-   <Card>
-    <CardMedia image=''></CardMedia>
-   </Card>
+    <Card>
+        <CardMedia component='img' image={destinationInfo.path} alt={destinationInfo.title} height={'200px'}/>
+        <CardContent>
+            <Typography variant='h4'>
+                ehwirjfnw
+            </Typography>
+        </CardContent>
+    </Card>
   )
 }
 
