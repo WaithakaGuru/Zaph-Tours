@@ -5,7 +5,7 @@ function Herosection() {
   return (
     <Grid container sx={{sm: 12, border: "1px solid red", mt: 2}}>
         <Box component={"section"} bgcolor={"#eee"}  justifyContent={"center"} height={"100%"}
-         sx={{display: "flex", flexDirection:"column", backgroundImage: './ZaphHero image.avif',  backgroundSize: 'cover',
+         sx={{display: "flex", flexDirection:"column", backgroundImage: 'url(./ZaphHero-image.jpeg)',  backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',}}>
             <Typography variant='h2' fontWeight={800} color={'chocolate'} fontSize={"3rem"} align='center' gutterBottom>
