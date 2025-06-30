@@ -22,7 +22,7 @@
       "@/*": ["src/*"]
     },
 
-     /* Recommended for Vite + React */
+    /* Recommended for Vite + React */
     "resolveJsonModule": true,
     "isolatedModules": true,
     "allowSyntheticDefaultImports": true,

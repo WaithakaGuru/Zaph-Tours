@@ -1,14 +1,26 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Box, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import { Link as RouterLink } from 'react-router-dom';
+import React from "react";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Box,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import { Link as RouterLink } from "react-router-dom";
 
 const navLinks = [
-  { label: 'Home', path: '/' },
-  { label: 'Destinations', path: '/destinations' },
-  { label: 'Trip Types', path: '/trip-types' },
-  { label: 'Blog', path: '/blog' },
-  { label: 'Contact', path: '/contact' },
+  { label: "Home", path: "/" },
+  { label: "Destinations", path: "/destinations" },
+  { label: "Trip Types", path: "/trip-types" },
+  { label: "Blog", path: "/blog" },
+  { label: "Contact", path: "/contact" },
 ];
 
 const Navbar: React.FC = () => {
@@ -21,16 +33,26 @@ const Navbar: React.FC = () => {
     <>
       <AppBar position="static" color="primary" elevation={2}>
         <Toolbar>
-          <Typography variant="h5" fontWeight={700} sx={{ flexGrow: 1 }} component={RouterLink} to="/" color="inherit" style={{ textDecoration: 'none' }}>
+          <Typography
+            variant="h5"
+            fontWeight={700}
+            sx={{ flexGrow: 1 }}
+            component={RouterLink}
+            to="/"
+            color="inherit"
+            style={{ textDecoration: "none" }}
+          >
             Zaph Tours
           </Typography>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
+          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
             {navLinks.map((link) => (
               <Button
                 key={link.path}
                 component={RouterLink}
                 to={link.path}
-                color={location.pathname === link.path ? 'secondary' : 'inherit'}
+                color={
+                  location.pathname === link.path ? "secondary" : "inherit"
+                }
                 sx={{ fontWeight: 600 }}
               >
                 {link.label}
@@ -40,7 +62,7 @@ const Navbar: React.FC = () => {
           <IconButton
             color="inherit"
             edge="end"
-            sx={{ display: { xs: 'flex', md: 'none' } }}
+            sx={{ display: { xs: "flex", md: "none" } }}
             onClick={handleDrawerToggle}
             aria-label="menu"
           >
@@ -48,12 +70,25 @@ const Navbar: React.FC = () => {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerToggle} sx={{ display: { md: 'none' } }}>
-        <Box sx={{ width: 220 }} role="presentation" onClick={handleDrawerToggle}>
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={handleDrawerToggle}
+        sx={{ display: { md: "none" } }}
+      >
+        <Box
+          sx={{ width: 220 }}
+          role="presentation"
+          onClick={handleDrawerToggle}
+        >
           <List>
             {navLinks.map((link) => (
               <ListItem key={link.path} disablePadding>
-                <ListItemButton component={RouterLink} to={link.path} selected={location.pathname === link.path}>
+                <ListItemButton
+                  component={RouterLink}
+                  to={link.path}
+                  selected={location.pathname === link.path}
+                >
                   <ListItemText primary={link.label} />
                 </ListItemButton>
               </ListItem>
