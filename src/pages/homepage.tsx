@@ -1,12 +1,23 @@
 import { grey} from "@mui/material/colors";
 import Herosection from "../components/Herosection";
-import {Typography, Box, Container} from '@mui/material';
+import {Typography, Box, Container, Fade} from '@mui/material';
 import destinations from "../utils/Destinations";
 import DestinationCard from "../components/DestinationCard";
 import TestimonialCard from "../components/TestimonialCard";
 import testimonials from "../utils/Testimonials";
+import { useEffect, useState } from "react";
 
 function Homepage() {
+    const [testimonialIndex, setTestimonialIndex] = useState(0);
+
+    useEffect(()=> {
+        const testimonyInterval = setInterval(()=> {
+            setTestimonialIndex(prev =>(prev+ 1) % testimonials.length) 
+        }, 5000)
+
+        return () => clearInterval(testimonyInterval)
+    }, [])
+
   return (
     <>
       <Herosection />
@@ -46,9 +57,9 @@ function Homepage() {
         </Container>
 
         {/* Testimonials from our past travellors */}
-        {
-            testimonials.map((testimony,idx) =><TestimonialCard {...testimony} key={idx}/>)
-        }
+        <Fade in timeout={800} key={testimonialIndex} mountOnEnter unmountOnExit>
+            <TestimonialCard {...testimonials[testimonialIndex]}/>
+        </Fade>
       </Box>
     </>
   );
