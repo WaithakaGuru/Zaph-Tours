@@ -12,7 +12,7 @@ const theme = createTheme({
         },
         text: {
             primary: '#222',
-            secondary: '#777',
+            secondary: '#555',
             disabled: '#ddd'
         }
     },
