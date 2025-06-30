@@ -31,9 +31,9 @@ function Homepage() {
                 Featured Destinations
             </Typography>
             <Grid container spacing={4}>
-                <Grid item > 
+                {/* <Grid item > 
                     <Typography variant="subtitle1">this and that</Typography>
-                </Grid>
+                </Grid> */}
             </Grid>
         </Container>
       </Box>

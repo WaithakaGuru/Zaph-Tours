@@ -1,4 +1,4 @@
-import {Card, CardContent, CardMedia, Grid, Typography} from '@mui/material'
+import {Card, CardContent, CardMedia, Typography} from '@mui/material'
 
 
 function DestinationCard({...destinationInfo}) {
