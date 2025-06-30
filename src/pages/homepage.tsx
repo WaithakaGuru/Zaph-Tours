@@ -26,15 +26,15 @@ function Homepage() {
         </Box>
             
         {/* The featured destinations section */}
-        <Container sx={{px: 6}}>
+        <Container sx={{p: 4, bgcolor:"#f3f3f3", mt: 4}} id="featured-destinations">
             <Typography variant="h3" align="center"
             gutterBottom
-            sx={{mt: 3, color: grey[800], fontSize: '2.6rem', fontWeight: 600 }}>
+            sx={{mb: 6, color: grey[800], fontSize: '2.6rem', fontWeight: 600 }}>
                 Featured Destinations
             </Typography>
             <Box component={'div'} display={'grid'}
              gridTemplateColumns={{ xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr'}}
-             sx={{gap:2}}>
+             sx={{gap:3}}>
                {
                 destinations.map((destination) => (
                     <DestinationCard {...destination} key={destination.name}/>

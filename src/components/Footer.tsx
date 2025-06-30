@@ -26,14 +26,20 @@ const Footer: React.FC = () => (
         <Typography variant="body1" fontWeight={500}>
           © {new Date().getFullYear()} Zaph Tours. All rights reserved.
         </Typography>
+
+        <Typography variant="body1" fontWeight={600}>
+          Crafted with &hearts; by  
+          <Link href={'https://github.com/WaithakaGuru'}>  Waithaka</Link>
+        </Typography>
+
         <Stack direction="row" spacing={2}>
-          <Link href="#" color="inherit" aria-label="Facebook">
+          <Link href="https://facebook.com" color="inherit" aria-label="Facebook">
             <FacebookIcon />
           </Link>
-          <Link href="#" color="inherit" aria-label="Twitter">
+          <Link href="https://x.com" color="inherit" aria-label="Twitter">
             <TwitterIcon />
           </Link>
-          <Link href="#" color="inherit" aria-label="Instagram">
+          <Link href="https://instagram.com" color="inherit" aria-label="Instagram">
             <InstagramIcon />
           </Link>
         </Stack>

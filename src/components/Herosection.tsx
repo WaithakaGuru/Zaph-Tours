@@ -39,7 +39,7 @@ function Herosection() {
         <Button
           variant="contained"
           size="large"
-          href="#"
+          href="#featured-destinations"
         //   disabled
           disableRipple
           sx={{ minWidth: "20%", mx: "auto",
