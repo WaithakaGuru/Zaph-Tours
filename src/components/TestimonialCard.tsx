@@ -7,7 +7,7 @@ function TestimonialCard({...testimonialInfo}) {
     <>
     <Paper elevation={2} sx={{
       p: 3, alignItems:'center', display: 'flex,',
-      flexDirection: 'column', width: '80%'
+      flexDirection: 'column', width: '80%', maxWidth: 600, maxHeight: 180
     }}>
         <Avatar sx={{
           bgcolor: 'orange', fontWeight: 500,

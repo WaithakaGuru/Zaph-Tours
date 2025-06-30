@@ -57,9 +57,17 @@ function Homepage() {
         </Container>
 
         {/* Testimonials from our past travellors */}
-        <Fade in timeout={800} key={testimonialIndex} mountOnEnter unmountOnExit>
-            <TestimonialCard {...testimonials[testimonialIndex]}/>
-        </Fade>
+        <Container sx={{bgcolor: 'primary.main', width: '70%',
+             display: 'flex', flexDirection:'column', my: 4,
+             alignItems: 'center', height: '50dvh', boxShadow: '0 0 .5rem rgba(0,0,0,0.4), -1px -1px .5rem #fff' }}>
+            <Typography variant="h4" fontSize={'2rem'} fontWeight={700}
+             align="center" gutterBottom sx={{my: 3}}>
+                Our Travellors Say
+            </Typography>
+            {/* // <Fade in timeout={800} key={testimonialIndex}> */}
+                <TestimonialCard {...testimonials[testimonialIndex]}/>
+            {/* </Fade> */}
+        </Container>
       </Box>
     </>
   );
