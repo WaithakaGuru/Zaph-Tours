@@ -1,11 +1,12 @@
-import { grey} from "@mui/material/colors";
+import {grey} from "@mui/material/colors";
 import Herosection from "../components/Herosection";
-import {Typography, Box, Container} from '@mui/material';
+import {Typography, Box, Container, Paper, Button, Icon, TextField} from '@mui/material';
 import destinations from "../utils/Destinations";
 import DestinationCard from "../components/DestinationCard";
 import TestimonialCard from "../components/TestimonialCard";
 import testimonials from "../utils/Testimonials";
 import { useEffect, useState } from "react";
+import { Email } from "@mui/icons-material";
 
 function Homepage() {
     const [testimonialIndex, setTestimonialIndex] = useState(0);
@@ -13,7 +14,7 @@ function Homepage() {
     useEffect(()=> {
         const testimonyInterval = setInterval(()=> {
             setTestimonialIndex(prev =>(prev+ 1) % testimonials.length) 
-        }, 5000)
+        }, 3000)
 
         return () => clearInterval(testimonyInterval)
     }, [])
@@ -57,16 +58,33 @@ function Homepage() {
         </Container>
 
         {/* Testimonials from our past travellors */}
-        <Container sx={{bgcolor: 'primary.main', width: '70%',
-             display: 'flex', flexDirection:'column', my: 4,
+        <Container sx={{bgcolor: 'primary.main', maxWidth: '70rem', width: '70%',
+             display: 'flex', flexDirection:'column', my: 4, minWidth: '25rem',
              alignItems: 'center', height: '50dvh', boxShadow: '0 0 .5rem rgba(0,0,0,0.4), -1px -1px .5rem #fff' }}>
             <Typography variant="h4" fontSize={'2rem'} fontWeight={700}
-             align="center" gutterBottom sx={{my: 3}}>
+             align="center" gutterBottom sx={{my: 3, color: 'darkslategrey'}}>
                 Our Travellors Say
             </Typography>
             {/* // <Fade in timeout={800} key={testimonialIndex}> */}
                 <TestimonialCard {...testimonials[testimonialIndex]}/>
             {/* </Fade> */}
+        </Container>
+        <Container sx={{display: 'flex', justifyContent: 'center'}}>
+            <Paper elevation={2} sx={{bgcolor: '#fff', p:4 , minWidth: '30rem' }}>
+                <Typography variant="h5" fontWeight={600} gutterBottom
+                color="text.primary" align="center">
+                    Subscribe to Our Newsletter
+                </Typography>
+                <Typography variant="body2" align="center" fontSize={'.9rem'} fontWeight={500} color="text.secondary">
+                  Get Weekly updates on Safaris and Adventures 
+                </Typography>
+                <Box display={'flex'} justifyContent={'center'} sx={{gap: 4, p: 2, }}>
+                    <TextField placeholder="Enter your Email address"></TextField>
+                    <Button variant="contained" sx={{py: 1, display: 'flex', alignItems:'center'}}>
+                        Subscribe <Icon sx={{mx: 1, mb: 1}}><Email/></Icon> 
+                    </Button>
+                </Box>
+            </Paper>
         </Container>
       </Box>
     </>

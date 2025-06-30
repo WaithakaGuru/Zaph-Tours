@@ -1,4 +1,5 @@
-import React from "react";
+import {useState, type FC} from "react";
+import { useLocation } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -23,9 +24,9 @@ const navLinks = [
   { label: "Contact", path: "/contact" },
 ];
 
-const Navbar: React.FC = () => {
-  const [drawerOpen, setDrawerOpen] = React.useState(false);
-  // const location = useLocation();
+const Navbar: FC = () => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const location = useLocation();
 
   const handleDrawerToggle = () => setDrawerOpen((open) => !open);
 
