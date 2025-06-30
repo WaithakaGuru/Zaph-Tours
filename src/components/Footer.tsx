@@ -3,15 +3,17 @@ import { Box, Typography, Container, Stack, Link } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { grey } from "@mui/material/colors";
 
 const Footer: React.FC = () => (
   <Box
     component="footer"
     sx={{
-      bgcolor: "primary.main",
+      bgcolor: grey[900],
       color: "primary.contrastText",
       py: 4,
       mt: 8,
+      minHeight: '10rem'
     }}
   >
     <Container maxWidth="lg">

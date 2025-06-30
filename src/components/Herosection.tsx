@@ -1,4 +1,5 @@
 import { Typography, Box, Button, Grid } from "@mui/material";
+import {grey} from '@mui/material/colors'
 
 function Herosection() {
   return (
@@ -23,18 +24,20 @@ function Herosection() {
         <Typography
           variant="h2"
           fontWeight={800}
-          color={'success'}
+          textTransform={"capitalize"}
           fontSize={"3rem"}
           align="center"
           gutterBottom
+          sx={{color: grey[900], textShadow: '0 0 3px darkorange'}}
         >
           Best safaris and adventures
         </Typography>
         <Button
           variant="contained"
-          color="secondary"
           size="large"
           href="#"
+          color="secondary"
+        //   disabled
           disableRipple
           sx={{ minWidth: "20%", mx: "auto",
              my: 1, py:2, mt: 7, '&:hover': {
@@ -43,10 +46,16 @@ function Herosection() {
              '&:active' : {
                 scale: '.95' 
              },
-             transition: "scale .4s"
+             transition: "scale .4s",
+             '&.Mui-disabled': {
+                color: grey[600],
+                backgroundColor: grey[200]
+             }
             }}
         >
-            <Typography variant="h3" fontWeight={700} fontSize={"1.6rem"}>
+            <Typography variant="h3" textTransform={'uppercase'}
+            fontWeight={700} fontSize={"1.6rem"}
+            >
                 Explore more
             </Typography>
         </Button>

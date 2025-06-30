@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link as RouterLink } from "react-router-dom";
-
+import { grey } from "@mui/material/colors";
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "Destinations", path: "/destinations" },
@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <AppBar position="static" color="primary" elevation={2}>
+      <AppBar position="static" elevation={2} sx={{backgroundColor: grey[700]}}>
         <Toolbar>
           <Typography
             variant="h5"
