@@ -1,6 +1,6 @@
 import { grey} from "@mui/material/colors";
 import Herosection from "../components/Herosection";
-import {Typography, Box, Container, Fade} from '@mui/material';
+import {Typography, Box, Container} from '@mui/material';
 import destinations from "../utils/Destinations";
 import DestinationCard from "../components/DestinationCard";
 import TestimonialCard from "../components/TestimonialCard";
