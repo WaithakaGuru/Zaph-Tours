@@ -11,7 +11,7 @@ function TestimonialCard({ ...testimonialInfo }) {
           alignItems: "center",
           display: "flex,",
           flexDirection: "column",
-          width: "80%",
+          // width: "80%",
           maxWidth: 600,
           maxHeight: 200,
         }}

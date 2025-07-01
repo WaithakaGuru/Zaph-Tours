@@ -154,14 +154,15 @@ function Homepage() {
             <Box
               display={"flex"}
               justifyContent={"center"}
-              sx={{ gap: 4, p: 2 }}
+              sx={{ gap: 1, p: 2 }}
             >
-              <TextField placeholder="Enter your Email address"></TextField>
+              <TextField label="Enter Email address" sx={{minWidth: '20rem'}}></TextField>
               <Button
                 variant="contained"
-                sx={{ py: 1, display: "flex", alignItems: "center" }}
+                size="large"
+                sx={{ p:1, display: "flex", alignItems: "center", minWidth: "fit-content" }}
               >
-                Subscribe{" "}
+                Subscribe
                 <Icon sx={{ mx: 1, mb: 1 }}>
                   <Email />
                 </Icon>

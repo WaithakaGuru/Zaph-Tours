@@ -4,11 +4,10 @@ function DestinationCard({ ...destinationInfo }) {
   return (
     <Card
       sx={{
-        minWidth: 'fit-content',
         transition: "scale .4s",
         borderRadius: ".3rem",
-        width: {
-          xs: '25rem'
+        minWidth: {
+          xs: '23.7rem'
         },
         "&:hover": { scale: 1.05 },
       }}

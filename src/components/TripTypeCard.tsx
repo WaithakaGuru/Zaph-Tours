@@ -1,4 +1,5 @@
-import { Paper, Typography } from "@mui/material"
+import { SkipNextRounded, SkipPreviousRounded } from "@mui/icons-material"
+import { Accordion, AccordionDetails, AccordionSummary, Alert, CardMedia, Paper, Typography } from "@mui/material"
 
 type TripeType = {
   title: string,
@@ -10,11 +11,21 @@ type TripeType = {
 
 function TripTypeCard(tripInfo: TripeType ) {
   return (
-    <Paper >
-        <Typography>
-           
-        </Typography>
-        TripType
+    <Paper elevation={0} sx={{my: 4}}>
+      <CardMedia component={'img'} image={tripInfo.images[0]}/>
+       <SkipNextRounded/>
+       <SkipPreviousRounded/>
+          <Typography variant="h6" color="primary">
+            {tripInfo.title}
+          </Typography>
+       <Accordion>
+        <AccordionSummary> 
+          <Alert severity="info"> LEARN MORE </Alert>
+        </AccordionSummary>
+        <AccordionDetails>
+          {tripInfo.description}
+        </AccordionDetails>
+       </Accordion>
     </Paper>
   )
 }
