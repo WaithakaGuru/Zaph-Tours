@@ -1,5 +1,4 @@
 import {
-  Box,
   Stack,
   Card,
   CardContent,
@@ -10,6 +9,8 @@ import {
   Chip,
   CardActions,
   Tooltip,
+  Container,
+  Box,
 } from "@mui/material";
 
 import destinations from "../utils/Destinations";
@@ -17,7 +18,7 @@ import { Group, OneK } from "@mui/icons-material";
 
 function DestinationsPage() {
   return (
-    <Box>
+    <Container>
       <Stack direction={'column'}>
         <Typography variant="h3"align="center" my={3} fontSize={40} gutterBottom
         color="primary" textTransform="uppercase" fontWeight={600}>
@@ -28,16 +29,22 @@ function DestinationsPage() {
               giving a full detailed explanation of the area with the cost and the experiences thereof. 
         </Typography>
 
-        <Grid container spacing={3} p={2} width={'100%'} justifyContent={'center'} >
+        <Box display={"grid"} gridTemplateColumns={{
+              xs: "1fr",
+              sm: "1fr 1fr",
+              md: "1fr 1fr 1fr",
+            }}  gap={3}
+          justifyContent={'center'} 
+          p={3}
+          bgcolor={'#f9f9f9'} >
             {destinations.map(destination => (
-            <Grid sx={{xs: 12, md: 6, lg: 12}} minWidth= {'25rem'}
-               maxWidth={'30%'}> 
               <Card
                 sx={{
                   transition: "scale .4s",
                   borderRadius: ".3rem",
                   "&:hover": { scale: 1.05 },
                   minHeight :'max-content',
+                  minWidth: '20rem',
                   position:"relative"
                 }}
               >
@@ -45,7 +52,7 @@ function DestinationsPage() {
                   component="img"
                   image={destination.image}
                   alt={destination.name}
-                  height={"250px"}
+                  height={'200px'}
                 />
                 <CardContent>
                   <Typography variant="h6" fontWeight={600} align="center" gutterBottom>
@@ -95,23 +102,10 @@ function DestinationsPage() {
                   </Stack>
                 </CardContent>
               </Card>
-            </Grid>
             ))}
-        </Grid>
-
-        {/* <Accordion>
-          <AccordionSummary expandIcon={<ExpandMore />}>
-            <Typography>What is MUI?</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              MUI (Material-UI) is a popular React UI framework based on
-              Google's Material Design.
-            </Typography>
-          </AccordionDetails>
-        </Accordion> */}
+        </Box>
       </Stack>
-    </Box>
+    </Container>
   );
 }
 

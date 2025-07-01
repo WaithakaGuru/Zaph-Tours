@@ -33,7 +33,7 @@ const Navbar: FC = () => {
   return (
     <>
       <AppBar
-        position="static"
+        position="sticky"
         elevation={2}
         sx={{ backgroundColor: grey[700] }}
       >
