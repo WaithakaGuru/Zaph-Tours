@@ -4,7 +4,7 @@ import theme from "./theme/theme";
 import "./styles/App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Homepage from "./pages/homepage";
+import Homepage from "./pages/Homepage";
 import DestinationsPage from "./pages/DestinationsPage";
 import TripTypesPage from "./pages/TripTypesPage";
 import ContactPage from "./pages/ContactPage";
