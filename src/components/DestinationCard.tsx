@@ -7,7 +7,7 @@ function DestinationCard({ ...destinationInfo }) {
         transition: "scale .4s",
         borderRadius: ".3rem",
         minWidth: {
-          xs: '23.7rem'
+          xs: '24rem'
         },
         "&:hover": { scale: 1.05 },
       }}

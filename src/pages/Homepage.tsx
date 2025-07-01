@@ -156,7 +156,7 @@ function Homepage() {
               justifyContent={"center"}
               sx={{ gap: 1, p: 2 }}
             >
-              <TextField label="Enter Email address" sx={{minWidth: '20rem'}}></TextField>
+              <TextField label="Email address"  placeholder="Enter your email address" sx={{minWidth: '20rem'}}></TextField>
               <Button
                 variant="contained"
                 size="large"
