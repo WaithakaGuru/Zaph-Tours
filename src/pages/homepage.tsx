@@ -110,7 +110,7 @@ function Homepage() {
             my: 4,
             minWidth: "25rem",
             alignItems: "center",
-            height: "40dvh",
+            height: "45dvh",
             boxShadow: "0 0 .5rem rgba(0,0,0,0.4), -1px -1px .5rem #fff",
           }}
         >
