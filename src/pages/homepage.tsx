@@ -91,6 +91,7 @@ function Homepage() {
               sm: "1fr 1fr",
               md: "1fr 1fr 1fr",
             }}
+            justifyContent={'center'}
             sx={{ gap: 3 }}
           >
             {destinations.map((destination) => (
@@ -103,12 +104,11 @@ function Homepage() {
         <Container
           sx={{
             bgcolor: "primary.main",
-            maxWidth: "80vw",
-            width: "110%",
             display: "flex",
             flexDirection: "column",
             my: 4,
-            minWidth: "25rem",
+            mx: 'auto',
+            minWidth: "26rem",
             alignItems: "center",
             height: "45dvh",
             boxShadow: "0 0 .5rem rgba(0,0,0,0.4), -1px -1px .5rem #fff",
@@ -119,8 +119,7 @@ function Homepage() {
             fontSize={"2rem"}
             fontWeight={700}
             align="center"
-            gutterBottom
-            sx={{ my: 3, color: "darkslategrey" }}
+            sx={{ my: 2, color: "darkslategrey" }}
           >
             Our Travellers Say
           </Typography>
@@ -131,7 +130,7 @@ function Homepage() {
         <Container sx={{ display: "flex", justifyContent: "center" }}>
           <Paper
             elevation={2}
-            sx={{ bgcolor: "#fff", p: 4, minWidth: "35rem" }}
+            sx={{ bgcolor: "#fff", p: 4, minWidth: "30rem" }}
           >
             <Typography
               variant="h5"

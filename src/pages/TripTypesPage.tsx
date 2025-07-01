@@ -1,5 +1,10 @@
+// import tripTypes from "../utils/TripTypes";
+import TripTypeCard from "../components/TripTypeCard";
+
 function TripTypesPage() {
-  return <div>TripTypesPage</div>;
+  return (
+    <TripTypeCard/>
+  ) 
 }
 
 export default TripTypesPage;

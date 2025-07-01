@@ -4,8 +4,12 @@ function DestinationCard({ ...destinationInfo }) {
   return (
     <Card
       sx={{
+        minWidth: 'fit-content',
         transition: "scale .4s",
         borderRadius: ".3rem",
+        width: {
+          xs: '25rem'
+        },
         "&:hover": { scale: 1.05 },
       }}
     >
@@ -13,7 +17,7 @@ function DestinationCard({ ...destinationInfo }) {
         component="img"
         image={destinationInfo.image}
         alt={destinationInfo.name}
-        height={"200px"}
+        height={"240px"}
       />
       <CardContent>
         <Typography variant="h6" fontWeight={600} align="center" gutterBottom>
