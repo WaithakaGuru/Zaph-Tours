@@ -103,8 +103,8 @@ function Homepage() {
         <Container
           sx={{
             bgcolor: "primary.main",
-            maxWidth: "70rem",
-            width: "70%",
+            maxWidth: "80vw",
+            width: "110%",
             display: "flex",
             flexDirection: "column",
             my: 4,
