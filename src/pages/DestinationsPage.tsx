@@ -1,23 +1,18 @@
 import {
   Box,
   Stack,
-  Container,
   Card,
   CardContent,
   CardMedia,
   Typography,
   Button,
-  // Accordion,
-  // AccordionSummary,
-  // AccordionDetails,
   Grid,
   Chip,
   CardActions,
   Alert,
   Tooltip,
 } from "@mui/material";
-// import { ExpandMore } from "@mui/icons-material";
-// import DestinationCard from "../components/DestinationCard";
+
 import destinations from "../utils/Destinations";
 import { Group, OneK } from "@mui/icons-material";
 
