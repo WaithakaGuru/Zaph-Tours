@@ -60,7 +60,7 @@ function Homepage() {
         {/* Testimonials from our past travellors */}
         <Container sx={{bgcolor: 'primary.main', maxWidth: '70rem', width: '70%',
              display: 'flex', flexDirection:'column', my: 4, minWidth: '25rem',
-             alignItems: 'center', height: '50dvh', boxShadow: '0 0 .5rem rgba(0,0,0,0.4), -1px -1px .5rem #fff' }}>
+             alignItems: 'center', height: '40dvh', boxShadow: '0 0 .5rem rgba(0,0,0,0.4), -1px -1px .5rem #fff' }}>
             <Typography variant="h4" fontSize={'2rem'} fontWeight={700}
              align="center" gutterBottom sx={{my: 3, color: 'darkslategrey'}}>
                 Our Travellors Say
