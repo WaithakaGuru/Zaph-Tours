@@ -16,7 +16,6 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link as RouterLink } from "react-router-dom";
-import { grey } from "@mui/material/colors";
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "Destinations", path: "/destinations" },
