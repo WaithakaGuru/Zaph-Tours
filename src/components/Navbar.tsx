@@ -12,6 +12,7 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  CardMedia,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link as RouterLink } from "react-router-dom";
@@ -35,18 +36,25 @@ const Navbar: FC = () => {
       <AppBar
         position="sticky"
         elevation={2}
-        sx={{ backgroundColor: grey[700] }}
+        sx={{ backgroundColor: 'color-mix(in srgb, 30% green, 70% #222)' }}
       >
         <Toolbar>
           <Typography
             variant="h5"
             fontWeight={700}
             sx={{ flexGrow: 1 }}
+            alignItems={'center'}
+            display={'flex'}
             component={RouterLink}
             to="/"
             color="inherit"
             style={{ textDecoration: "none" }}
           >
+            <CardMedia component={'img'}  image="./zaphTourslogo.png" sx={{
+              height: '50px',
+              width: '50px',
+              mx: 2
+            }}/>
             Zaph Tours
           </Typography>
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>

@@ -1,10 +1,18 @@
 import { Paper, Typography } from "@mui/material"
 
-function TripTypeCard() {
+type TripeType = {
+  title: string,
+  description: string, 
+  images: string[],
+  price: string,
+  offer: string 
+}
+
+function TripTypeCard(tripInfo: TripeType ) {
   return (
-    <Paper>
+    <Paper >
         <Typography>
-            Something Extra
+           
         </Typography>
         TripType
     </Paper>

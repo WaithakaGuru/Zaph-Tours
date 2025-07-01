@@ -130,7 +130,8 @@ function Homepage() {
         <Container sx={{ display: "flex", justifyContent: "center" }}>
           <Paper
             elevation={2}
-            sx={{ bgcolor: "#fff", p: 4, minWidth: "30rem" }}
+            sx={{ bgcolor: "#fff", p: 4, minWidth: {
+              xs: "30rem" }}}
           >
             <Typography
               variant="h5"
