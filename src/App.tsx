@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import Homepage from "./pages/homepage";
 import DestinationsPage from "./pages/DestinationsPage";
 import TripTypesPage from "./pages/TripTypesPage";
-import ContactPage  from "./pages/ContactPage";
+import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
 
 function App() {

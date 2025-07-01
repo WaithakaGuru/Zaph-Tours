@@ -1,4 +1,4 @@
-import {useState, type FC} from "react";
+import { useState, type FC } from "react";
 import { useLocation } from "react-router-dom";
 import {
   AppBar,
@@ -32,7 +32,11 @@ const Navbar: FC = () => {
 
   return (
     <>
-      <AppBar position="static" elevation={2} sx={{backgroundColor: grey[700]}}>
+      <AppBar
+        position="static"
+        elevation={2}
+        sx={{ backgroundColor: grey[700] }}
+      >
         <Toolbar>
           <Typography
             variant="h5"

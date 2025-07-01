@@ -13,7 +13,7 @@ const Footer: React.FC = () => (
       color: "primary.contrastText",
       py: 4,
       mt: 8,
-      minHeight: '10rem'
+      minHeight: "10rem",
     }}
   >
     <Container maxWidth="lg">
@@ -28,18 +28,26 @@ const Footer: React.FC = () => (
         </Typography>
 
         <Typography variant="body1" fontWeight={600}>
-          Crafted with &hearts; by  
-          <Link href={'https://github.com/WaithakaGuru'}>  Waithaka</Link>
+          Crafted with &hearts; by
+          <Link href={"https://github.com/WaithakaGuru"}> Waithaka</Link>
         </Typography>
 
         <Stack direction="row" spacing={2}>
-          <Link href="https://facebook.com" color="inherit" aria-label="Facebook">
+          <Link
+            href="https://facebook.com"
+            color="inherit"
+            aria-label="Facebook"
+          >
             <FacebookIcon />
           </Link>
           <Link href="https://x.com" color="inherit" aria-label="Twitter">
             <TwitterIcon />
           </Link>
-          <Link href="https://instagram.com" color="inherit" aria-label="Instagram">
+          <Link
+            href="https://instagram.com"
+            color="inherit"
+            aria-label="Instagram"
+          >
             <InstagramIcon />
           </Link>
         </Stack>

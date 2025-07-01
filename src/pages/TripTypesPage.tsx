@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function TripTypesPage() {
-  return (
-    <div>TripTypesPage</div>
-  )
+  return <div>TripTypesPage</div>;
 }
 
-export default TripTypesPage
+export default TripTypesPage;
