@@ -8,7 +8,7 @@ function Herosection() {
         component={"section"}
         justifyContent={"center"}
         width={"100%"}
-        minHeight={"25rem"}
+        minHeight={"30rem"}
         sx={{
           display: "flex",
           flexDirection: "column",
