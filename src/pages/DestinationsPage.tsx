@@ -7,8 +7,8 @@ import {
   AccordionDetails,
 } from "@mui/material";
 import { ExpandMore } from "@mui/icons-material";
-import DestinationCard from "../components/DestinationCard";
-import destinations from "../utils/Destinations";
+// import DestinationCard from "../components/DestinationCard";
+// import destinations from "../utils/Destinations";
 
 function DestinationsPage() {
   return (
