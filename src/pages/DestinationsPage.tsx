@@ -22,7 +22,7 @@ function DestinationsPage() {
       <Stack direction={'column'}>
         <Typography variant="h3"align="center" my={3} fontSize={40} gutterBottom
         color="primary" textTransform="uppercase" fontWeight={600}>
-          Explore the most existing destinations
+          Explore the most exciting destinations
         </Typography>
         <Typography variant="h6" maxWidth={'60%'} mx={'auto'} my={3}  align="center"  gutterBottom>
           A wide listing of all the top rated destinations by our previous travellers 
@@ -86,7 +86,11 @@ function DestinationsPage() {
                     >
                       <Tooltip sx={ {py: 0}} arrow  
                       title={`Learn more about the ${destination.name}`} color="secondary">
-                       <Alert severity="info" sx={{ cursor: 'cursor', py: 0, px: 1, alignItems: 'center' }}><Button sx={{my: 0}}>Learn More</Button> </Alert>
+                         <Button size="small" variant="contained"
+                          sx={{my: 0}} href="#"
+                        >
+                          Learn More
+                          </Button> 
                       </Tooltip>
                     </CardActions>
                   </Stack>
