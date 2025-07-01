@@ -122,7 +122,7 @@ function Homepage() {
             gutterBottom
             sx={{ my: 3, color: "darkslategrey" }}
           >
-            Our Travellors Say
+            Our Travellers Say
           </Typography>
           {/* // <Fade in timeout={800} key={testimonialIndex}> */}
           <TestimonialCard {...testimonials[testimonialIndex]} />
@@ -131,7 +131,7 @@ function Homepage() {
         <Container sx={{ display: "flex", justifyContent: "center" }}>
           <Paper
             elevation={2}
-            sx={{ bgcolor: "#fff", p: 4, minWidth: "30rem" }}
+            sx={{ bgcolor: "#fff", p: 4, minWidth: "35rem" }}
           >
             <Typography
               variant="h5"
