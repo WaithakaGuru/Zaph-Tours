@@ -14,13 +14,18 @@ function TripTypesPage() {
         justifyContent={"center"}
         fontWeight={600}
         fontSize={"1.6rem"}
+        position={'sticky'}
+        top={'4rem'}
+        zIndex={5}
+        bgcolor={'#fff'}
       >
-        Zaph Tours{" "}
-        <Typography variant="h4" color="primary">
+        Zaph Tours
+        <Typography variant="h4" color="primary" ml={1}>
           Trip Packages
         </Typography>
       </Typography>
-      <Typography variant="subtitle1" color="text.primary" align="center">
+      <Typography variant="subtitle1" color="text.primary"
+       maxWidth={{xs: 'auto', md: '70%' }} mx={'auto'}  align="center">
         Explore our packages in details with scenic views from the gallery of
         each package find what suits your budget: Zaph Tours has got you covered
         in any event be it holiday, family vacation or just a personal tour at
