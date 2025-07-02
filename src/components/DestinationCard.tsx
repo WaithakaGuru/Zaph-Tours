@@ -3,7 +3,7 @@ import {CardContent, CardMedia, Grid, Stack, Typography } from "@mui/material";
 function DestinationCard({ ...destinationInfo }) {
   return (
     <Grid
-       size={{xs: 12, sm:6,  md: 4, lg: 4}}
+       size={{xs: 12, sm:6,  md: 4}}
       bgcolor="#fff"
       sx={{
         minWidth: {
