@@ -1,15 +1,18 @@
-import { Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
+import {CardContent, CardMedia, Grid, Stack, Typography } from "@mui/material";
 
 function DestinationCard({ ...destinationInfo }) {
   return (
-    <Card
+    <Grid
+       size={{xs: 12, sm:6,  md: 4, lg: 4}}
+      bgcolor="#fff"
       sx={{
+        minWidth: {
+            xs: '25rem',
+            sm: 'auto'
+        },
         transition: "scale .4s",
         borderRadius: ".3rem",
-        minWidth: {
-          xs: '24rem'
-        },
-        "&:hover": { scale: 1.05 },
+        "&:hover": { scale: 1.05 }
       }}
     >
       <CardMedia
@@ -17,6 +20,7 @@ function DestinationCard({ ...destinationInfo }) {
         image={destinationInfo.image}
         alt={destinationInfo.name}
         height={"240px"}
+        sx={{borderRadius: '.3rem .3rem 0 0'}}
       />
       <CardContent>
         <Typography variant="h6" fontWeight={600} align="center" gutterBottom>
@@ -27,6 +31,8 @@ function DestinationCard({ ...destinationInfo }) {
           align="center"
           fontSize={"1rem"}
           color="text.secondary"
+          mx={'auto'}
+          maxWidth={'21rem'}
         >
           {destinationInfo.description}
         </Typography>
@@ -55,7 +61,7 @@ function DestinationCard({ ...destinationInfo }) {
           </Typography>
         </Stack>
       </CardContent>
-    </Card>
+    </Grid>
   );
 }
 

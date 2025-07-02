@@ -8,6 +8,7 @@ import {
   Button,
   Icon,
   TextField,
+  Grid
 } from "@mui/material";
 import destinations from "../utils/Destinations";
 import DestinationCard from "../components/DestinationCard";
@@ -68,7 +69,6 @@ function Homepage() {
         {/* The featured destinations section */}
         <Container
           sx={{ p: 4, bgcolor: "#f3f3f3", mt: 4 }}
-          id="featured-destinations"
         >
           <Typography
             variant="h3"
@@ -83,21 +83,13 @@ function Homepage() {
           >
             Featured Destinations
           </Typography>
-          <Box
-            component={"div"}
-            display={"grid"}
-            gridTemplateColumns={{
-              xs: "1fr",
-              sm: "1fr 1fr",
-              md: "1fr 1fr 1fr",
-            }}
-            justifyContent={'center'}
-            sx={{ gap: 3 }}
-          >
+          <Grid container justifyContent={'center'} spacing={3}
+             width={'100%'}
+           >
             {destinations.map((destination) => (
               <DestinationCard {...destination} key={destination.name} />
             ))}
-          </Box>
+          </Grid>
         </Container>
 
         {/* Testimonials from our past travellors */}

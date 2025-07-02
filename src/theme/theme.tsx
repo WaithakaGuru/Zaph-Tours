@@ -18,6 +18,15 @@ const theme = createTheme({
   typography: {
     fontFamily: "Montserrat",
   },
+  breakpoints:{
+    values: {
+      xs: 0,
+      sm: 680,
+      md: 990,
+      lg: 1200,
+      xl: 1400
+    },
+  }
 });
 
 export default theme;
