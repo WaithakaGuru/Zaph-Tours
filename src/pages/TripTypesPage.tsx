@@ -15,7 +15,8 @@ function TripTypesPage() {
         fontWeight={600}
         fontSize={"1.6rem"}
         position={'sticky'}
-        top={'4rem'}
+        top={'3.5rem'}
+        pt={1}
         zIndex={5}
         bgcolor={'#fff'}
       >
