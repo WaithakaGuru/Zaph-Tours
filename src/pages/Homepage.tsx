@@ -8,7 +8,7 @@ import {
   Button,
   Icon,
   TextField,
-  Grid
+  Grid,
 } from "@mui/material";
 import destinations from "../utils/Destinations";
 import DestinationCard from "../components/DestinationCard";
@@ -67,9 +67,7 @@ function Homepage() {
         </Box>
 
         {/* The featured destinations section */}
-        <Container
-          sx={{ p: 4, bgcolor: "#f3f3f3", mt: 4 }}
-        >
+        <Container sx={{ p: 4, bgcolor: "#f3f3f3", mt: 4 }}>
           <Typography
             variant="h3"
             align="center"
@@ -83,9 +81,7 @@ function Homepage() {
           >
             Featured Destinations
           </Typography>
-          <Grid container justifyContent={'center'} spacing={3}
-             width={'100%'}
-           >
+          <Grid container justifyContent={"center"} spacing={3} width={"100%"}>
             {destinations.map((destination) => (
               <DestinationCard {...destination} key={destination.name} />
             ))}
@@ -99,7 +95,7 @@ function Homepage() {
             display: "flex",
             flexDirection: "column",
             my: 4,
-            mx: 'auto',
+            mx: "auto",
             minWidth: "26rem",
             alignItems: "center",
             height: "45dvh",
@@ -122,8 +118,13 @@ function Homepage() {
         <Container sx={{ display: "flex", justifyContent: "center" }}>
           <Paper
             elevation={2}
-            sx={{ bgcolor: "#fff", p: 4, minWidth: {
-              xs: "30rem" }}}
+            sx={{
+              bgcolor: "#fff",
+              p: 4,
+              minWidth: {
+                xs: "30rem",
+              },
+            }}
           >
             <Typography
               variant="h5"
@@ -148,11 +149,20 @@ function Homepage() {
               justifyContent={"center"}
               sx={{ gap: 1, p: 2 }}
             >
-              <TextField label="Email address"  placeholder="Enter your email address" sx={{minWidth: '20rem'}}></TextField>
+              <TextField
+                label="Email address"
+                placeholder="Enter your email address"
+                sx={{ minWidth: "20rem" }}
+              ></TextField>
               <Button
                 variant="contained"
                 size="large"
-                sx={{ p:1, display: "flex", alignItems: "center", minWidth: "fit-content" }}
+                sx={{
+                  p: 1,
+                  display: "flex",
+                  alignItems: "center",
+                  minWidth: "fit-content",
+                }}
               >
                 Subscribe
                 <Icon sx={{ mx: 1, mb: 1 }}>
