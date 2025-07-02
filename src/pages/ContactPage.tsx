@@ -1,9 +1,9 @@
 import { Email, LocationCity, LocationCityTwoTone, Phone, Room } from "@mui/icons-material";
-import { Button, Grid, Paper, Typography, TextField, Box, Stack } from "@mui/material"
+import { Button, Grid, Paper, Typography, TextField, Box, Stack, Divider } from "@mui/material"
 
 function ContactPage() {
   return (
-    <Grid container columns={3}>
+    <Grid container columns={3} justifyContent={'center'}>
       <Paper component={'form'} elevation={2} sx={{ alignItems:'center',
         width:'25rem', p:2, m:2, display: 'flex', flexDirection: 'column'
         }} >
@@ -19,10 +19,12 @@ function ContactPage() {
         <TextField type="text" multiline minRows={5} label="Message" sx={{ my:1, width: '95%'}}
         placeholder="Type your message here" required/>  
 
-        <Button type="submit" variant="contained" size="large">Send Message</Button>
+        <Button type="submit" variant="contained" size="large" sx={{mt:2}}>
+          Send Message
+        </Button>
       </Paper>
       
-      <Paper elevation={2} sx={{p:3, m:2, minWidth: '20rem', display:'flex', alignItems:'center', flexDirection:'column'}}>
+      <Paper elevation={2} sx={{p:3, m:2, minWidth: '25rem', display:'flex', alignItems:'center', flexDirection:'column'}}>
         <Typography variant="h5" fontWeight={600} color="primary">
           Contact Information
         </Typography>
@@ -41,20 +43,34 @@ function ContactPage() {
            Location: Nairobi, Kenya
           </Typography>
         </Box>
-        <Stack>
-          <Typography variant="body1" fontWeight={600} align="center" gutterBottom>
+        <Stack mt={4}>
+          <Typography variant="body1" fontWeight={600} align="center"
+          color="secondary" gutterBottom>
             We are open on: 
           </Typography>
-          <Typography variant="subtitle1"  color="textSecondary">
+          <Typography variant="subtitle1"  color="textSecondary"gutterBottom>
               Monday-Friday: 8:00am - 6:00pm
           </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
+          <Typography variant="subtitle1" color="textSecondary"gutterBottom>
               Sunday: 9:00am - 5:00pm
           </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
+          <Typography variant="subtitle1" color="textSecondary"gutterBottom>
               Sat & Holidays: Closed
           </Typography>
         </Stack>
+        <Divider orientation="horizontal" flexItem></Divider>
+        <Box component={'div'} my={4} >
+          <Typography variant="body1" fontWeight={500} color="primary" gutterBottom>
+            Find us via the live map: 
+          </Typography>
+          <iframe 
+            title="Zaph Tours Location Map"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=36.8219%2C-1.2921%2C36.8219%2C-1.2921&amp;layer=mapnik" 
+            allowFullScreen
+            loading="lazy"
+            style={{border: 0, width: '100%', height: '100%'}}
+          />  
+        </Box>
       </Paper>
     </Grid>
   )
