@@ -7,6 +7,7 @@ import {
   Container,
 } from "@mui/material";
 import Overlay from "./Overlay";
+import { useEffect, useState } from "react";
 
 type TripeType = {
   id: string;
@@ -18,16 +19,33 @@ type TripeType = {
 };
 
 function TripTypeCard(tripInfo: TripeType) {
+  const [bgImgIndex, setBgImageIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const changeBgImageInterval = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setBgImageIndex((idx) => (idx + 1) % tripInfo.images.length);
+        setFade(true);
+      }, 700);
+    }, 3000);
+
+    return () => clearInterval(changeBgImageInterval);
+  }, [tripInfo.images.length]);
+
   return (
-    <Container>
+    <Container sx={{ml: { md: '-1rem'}}}>
       <Paper
         elevation={0}
         component={"section"}
         id={tripInfo.id}
-        sx={{
+        sx={{   
+          transition: "background-image 0s, opacity 0.7s", 
+          opacity: fade ? 1 : 0,
           p: 4,
           width: "80dvw",
-          backgroundImage: `url(${tripInfo.images[0]})`,
+          backgroundImage: `url(${tripInfo.images[bgImgIndex]})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -37,7 +55,7 @@ function TripTypeCard(tripInfo: TripeType) {
         }}
       >
         <Typography
-          variant="h5"
+          variant="h4"
           color="textPrimary"
           mx={2}
           sx={{ textShadow: "0 0 2px darkorange" }}

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import tripTypes from "../utils/TripTypes";
 import TripTypeCard from "../components/TripTypeCard";
 import { Container, Typography, Box, Chip, Stack, Button } from "@mui/material";
@@ -15,8 +16,7 @@ import {
 } from "@mui/icons-material";
 
 function TripTypesPage() {
-  // const [currentTripImageIdx, setCurrentTripImageIdx] = useState(0);
-
+  const [currentTripImageIdx, setCurrentTripImageIdx] = useState(0);
   const tourPackages = [
     { label: "Luxury Vacations", icon: <Star />, id: "luxury-vacations" },
     { label: "Adventure", icon: <Terrain />, id: "adventure" },
@@ -38,6 +38,14 @@ function TripTypesPage() {
     "warning",
     "default",
   ];
+
+
+  function handleSelectTripType(e: React.MouseEvent<HTMLButtonElement>) {
+    const selectedTriptypeIndex =  tripTypes.findIndex(tripType => tripType.id == e.currentTarget.id)
+    setCurrentTripImageIdx(selectedTriptypeIndex);
+  }
+
+
   return (
     <Container sx={{ width: "100%", justifyContent: "center" }}>
       <Typography
@@ -85,13 +93,13 @@ function TripTypesPage() {
         flexWrap={"wrap"}
         justifyContent={"center"}
         position={"sticky"}
-        bgcolor="color-mix(in srgb, 20% white, 80%rgb(221, 221, 221))"
+        bgcolor="#f9f9f9"
         mx={"auto"}
         zIndex={5}
         top={"4rem"}
         sx={{
           transition: "scale .4s",
-          boxShadow: "0 0 .5rem rgb(203, 250, 254)",
+          boxShadow: "0 0 .5rem rgba(0, 0, 0, .2)",
           px: {
             sm: "5%",
             md: "10%",
@@ -100,7 +108,9 @@ function TripTypesPage() {
       >
         {tourPackages.map((tour, idx) => (
           <Button
-            /*href={`#${tour.id}`}*/ key={idx}
+            onClick={handleSelectTripType}
+            id={tour.id}
+            key={idx}
             sx={{
               textTransform: "capitalize",
               "&:hover": {
@@ -136,9 +146,7 @@ function TripTypesPage() {
         gridTemplateColumns={{ xs: "1fr", sm: "1fr 1fr", md: "1fr 1fr 1fr" }}
         sx={{ bgcolor: "#f9f9f9", p: 2 }}
       >
-        {/* {tripTypes.map((tripType) => ( */}
-        <TripTypeCard {...tripTypes[0]} />
-        {/* ))} */}
+        <TripTypeCard {...tripTypes[currentTripImageIdx]} />
       </Box>
     </Container>
   );
