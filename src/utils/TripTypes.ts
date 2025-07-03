@@ -97,7 +97,7 @@ const tripTypes = [
     offer: "Free snorkeling tour",
   },
   {
-    id: "welness-retreats",
+    id: "wellness-retreats",
     title: "Wellness Retreats",
     images: [
       "wellness1.jpg",
