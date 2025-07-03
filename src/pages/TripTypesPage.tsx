@@ -14,9 +14,10 @@ import {
   BeachAccess,
   Restaurant,
 } from "@mui/icons-material";
+import {orange } from "@mui/material/colors";
 
 function TripTypesPage() {
-  const [currentTripImageIdx, setCurrentTripImageIdx] = useState(0);
+  const [currentTripTypeIdx, setCurrentTripTypeIdx] = useState(0);
   const tourPackages = [
     { label: "Luxury Vacations", icon: <Star />, id: "luxury-vacations" },
     { label: "Adventure", icon: <Terrain />, id: "adventure" },
@@ -39,12 +40,10 @@ function TripTypesPage() {
     "default",
   ];
 
-
   function handleSelectTripType(e: React.MouseEvent<HTMLButtonElement>) {
     const selectedTriptypeIndex =  tripTypes.findIndex(tripType => tripType.id == e.currentTarget.id)
-    setCurrentTripImageIdx(selectedTriptypeIndex);
+    setCurrentTripTypeIdx(selectedTriptypeIndex);
   }
-
 
   return (
     <Container sx={{ width: "100%", justifyContent: "center" }}>
@@ -87,7 +86,7 @@ function TripTypesPage() {
       <Stack
         direction={"row"}
         mb={2}
-        mt={4}
+        mt={2}
         py={1}
         maxWidth={"100%"}
         flexWrap={"wrap"}
@@ -112,7 +111,10 @@ function TripTypesPage() {
             id={tour.id}
             key={idx}
             sx={{
+              border: (tour.id === tripTypes[currentTripTypeIdx].id) ?  `.2rem solid ${orange[600]}` : 'none' ,
               textTransform: "capitalize",
+              p: '1px', m: 1,
+              borderRadius: '1rem',
               "&:hover": {
                 scale: 1.1,
               },
@@ -146,7 +148,7 @@ function TripTypesPage() {
         gridTemplateColumns={{ xs: "1fr", sm: "1fr 1fr", md: "1fr 1fr 1fr" }}
         sx={{ bgcolor: "#f9f9f9", p: 2 }}
       >
-        <TripTypeCard {...tripTypes[currentTripImageIdx]} />
+        <TripTypeCard {...tripTypes[currentTripTypeIdx]} />
       </Box>
     </Container>
   );

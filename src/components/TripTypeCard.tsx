@@ -5,6 +5,7 @@ import {
   Typography,
   Card,
   Container,
+  Stack,
 } from "@mui/material";
 import Overlay from "./Overlay";
 import { useEffect, useState } from "react";
@@ -29,7 +30,7 @@ function TripTypeCard(tripInfo: TripeType) {
         setBgImageIndex((idx) => (idx + 1) % tripInfo.images.length);
         setFade(true);
       }, 700);
-    }, 3000);
+    }, 8000);
 
     return () => clearInterval(changeBgImageInterval);
   }, [tripInfo.images.length]);
@@ -79,6 +80,9 @@ function TripTypeCard(tripInfo: TripeType) {
           adipisicing elit. Quos mollitia architecto consequatur voluptate saepe
           dicta nesciunt quaerat, sequi iure beatae?
         </Typography>
+        <Stack>
+          
+        </Stack>
         <Overlay />
       </Paper>
       <Card sx={{ p: 2 }}>
