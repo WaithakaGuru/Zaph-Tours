@@ -30,7 +30,7 @@ function TripTypeCard(tripInfo: TripeType) {
       setTimeout(() => {
         setBgImageIndex(prev => (prev + 1) % (tripInfo.images.length-1));
         setFade(true);
-      }, 800);
+      }, 1000);
     }, 10000);
 
     return () => clearInterval(changeBgImageInterval);
