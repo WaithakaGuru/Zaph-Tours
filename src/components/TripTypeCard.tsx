@@ -37,7 +37,7 @@ function TripTypeCard(tripInfo: TripeType) {
   }, []);
 
   return (
-    <Container sx={{ ml: { md: "-1rem" } }}>
+    <Container sx={{ ml: "-2rem", width: '100dvw'}}>
       <Paper
         elevation={0}
         component={"section"}
@@ -46,7 +46,7 @@ function TripTypeCard(tripInfo: TripeType) {
           transition: "background-image 0s, opacity 1s",
           opacity: fade ? 1 : 0,
           p: 4,
-          width: "80dvw",
+          width: '100%',
           backgroundImage: `url(${tripInfo.images[bgImgIndex]})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -74,7 +74,7 @@ function TripTypeCard(tripInfo: TripeType) {
           fontWeight={500}
           fontSize={"1rem"}
           maxWidth={
-            {md: '50%', xs: '90%'}
+            {sm:'70%', md: '50%', xs: '100%'}
           }
           position={"relative"}
           zIndex={2}
@@ -83,18 +83,18 @@ function TripTypeCard(tripInfo: TripeType) {
           adipisicing elit. Quos mollitia architecto consequatur voluptate saepe
           dicta nesciunt quaerat, sequi iure beatae?
         </Typography>
-        <Stack direction={{ xs:'column', md: "row"}} width={'70%'} spacing={2} mt={4}>
+        <Stack direction={{ xs:'column', md: "row"}} width={'70%'} spacing={1} mt={3}>
           <Chip
             label={`Price: Kes ${tripInfo.price}`}
             variant="filled"
             color="info"
-            sx={{ my: 2, fontSize: "1rem", width: '70%', py: 3}}
+            sx={{ my: 1, fontSize: "1rem", py: 3}}
           />
           <Chip
             label={`Offer: ${tripInfo.offer}`}
             variant="filled"
             color="warning"
-            sx={{ my: 2, fontSize: "1rem", fontWeight: 600, width: '70%', py:3 }}
+            sx={{ my: 1, fontSize: "1rem", fontWeight: 600, py:3 }}
           />
         </Stack>
         <Overlay />

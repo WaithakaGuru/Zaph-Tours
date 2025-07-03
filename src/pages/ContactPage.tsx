@@ -51,7 +51,7 @@ function ContactPage() {
           mx: "auto",
           p: 2,
           minWidth: {
-            xs: "25rem",
+            xs: "100%",
           },
         }}
       >
@@ -100,7 +100,7 @@ function ContactPage() {
             flexDirection: "column",
             justifyContent: "space-evenly",
             minWidth: {
-              xs: "72%",
+              xs: "100%",
             },
           }}
         >
@@ -121,7 +121,7 @@ function ContactPage() {
             sx={{ my: 1, width: "95%" }}
           />
           <TextField
-            type="text"
+            type="email"
             variant="outlined"
             placeholder="Enter your email addres"
             label="Email Address"
@@ -156,7 +156,7 @@ function ContactPage() {
             p: 3,
             m: 2,
             minWidth: {
-              xs: "25rem",
+              xs: "100%",
             },
             display: "flex",
             alignItems: "center",
@@ -262,7 +262,7 @@ function ContactPage() {
               src="https://www.openstreetmap.org/export/embed.html?bbox=36.8219%2C-1.2921%2C36.8219%2C-1.2921&amp;layer=mapnik"
               allowFullScreen
               loading="lazy"
-              style={{ border: 0, width: "24rem", height: "100%" }}
+              style={{ border: 0, width: "100%", height: "100%" }}
             />
           </Box>
         </Paper>
