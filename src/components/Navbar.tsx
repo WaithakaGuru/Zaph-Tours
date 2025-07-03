@@ -1,4 +1,4 @@
-import { useState, type FC } from "react";
+import { useState} from "react";
 import { useLocation } from "react-router-dom";
 import {
   AppBar,
@@ -24,7 +24,7 @@ const navLinks = [
   { label: "Contact", path: "/contact" },
 ];
 
-const Navbar: FC = () => {
+const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const location = useLocation();
 
@@ -35,7 +35,7 @@ const Navbar: FC = () => {
       <AppBar
         position="sticky"
         elevation={2}
-        sx={{ backgroundColor: "color-mix(in srgb, 30% green, 70% #222)" }}
+        sx={{ backgroundColor: "color-mix(in srgb, 40% green, 60% #222)" }}
       >
         <Toolbar>
           <Typography

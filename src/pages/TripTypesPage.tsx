@@ -1,6 +1,6 @@
 import tripTypes from "../utils/TripTypes";
 import TripTypeCard from "../components/TripTypeCard";
-import { Container, Typography, Box, Link, Chip, Stack } from "@mui/material";
+import { Container, Typography, Box, Chip, Stack, Button } from "@mui/material";
   import {
   Spoke,
   Star,
@@ -83,20 +83,26 @@ function TripTypesPage() {
         flexWrap={"wrap"}
         justifyContent={"center"}
         position={"sticky"}
-        bgcolor="color-mix(in srgb, 20% white, 80%rgb(252, 242, 204) )"
+        bgcolor="color-mix(in srgb, 20% white, 80%rgb(215, 255, 244))"
         mx={"auto"}
         zIndex={5}
         top={'4rem'}
         sx={{
+          transition: 'scale .4s',
+          boxShadow: '0 0 .5rem rgb(97, 199, 206)',
           px:{
              sm: '5%',  md: '10%'}
         }}
       >
         {tourPackages.map((tour, idx) => (
-          <Link href={tour.id} key={idx} order={"revert-layer"}>
+          <Button /*href={`#${tour.id}`}*/ key={idx} sx={{
+            textTransform: 'capitalize',
+            '&:hover': {
+             scale: 1.1
+            }
+            }}  >
             <Chip
               label={tour.label}
-              sx={{ mx: 1, my: '5px', fontSize: '1rem', fontFamily: 'Monteserrat'}}
               size="medium"
               variant={(idx%2 ===0)?  'outlined' : 'filled'}
               icon={tour.icon}
@@ -111,7 +117,7 @@ function TripTypesPage() {
                   | "default"
               }
             />
-          </Link>
+          </Button>
         ))}
       </Stack>
 

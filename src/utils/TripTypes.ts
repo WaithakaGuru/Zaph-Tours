@@ -3,6 +3,9 @@ const tripTypes = [
     id: "honeymoon",
     title: "Honeymoon",
     images: [
+      "./honeymoon1.png",
+      "./honeymoon2.png",
+      "./honeymoon3.png",
       "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
     ],
     description: "Romantic getaways for newlyweds in breathtaking locations.",
@@ -13,6 +16,8 @@ const tripTypes = [
     id: "family",
     title: "Family",
     images: [
+      "family2.jpg",
+      "family3.jpg",
       "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80",
     ],
     description: "Fun-filled adventures for the whole family.",
@@ -23,6 +28,9 @@ const tripTypes = [
     id: "adventure",
     title: "Adventure",
     images: [
+      "cultural1.jpg",
+      "cultural3.jpg",
+      "cultural2.png",
       "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80",
     ],
     description: "Thrilling experiences for adrenaline seekers.",
@@ -43,6 +51,10 @@ const tripTypes = [
     id: "wildlife-safaris",
     title: "Wildlife Safaris",
     images: [
+      "safari1.jpg",
+      "safari2.jpg",
+      "wildlife1.jpg",
+      "wildlife2.jpg",
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
     ],
     description: "See the Big Five and more in their natural habitat.",
@@ -53,6 +65,8 @@ const tripTypes = [
     id: "eco-tours",
     title: "Eco-Tours",
     images: [
+      "eco1.jpg",
+      "eco2.png",
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
     ],
     description: "Sustainable travel for nature lovers.",
@@ -63,6 +77,9 @@ const tripTypes = [
     id: "luxury-vacations",
     title: "Luxury Vacations",
     images: [
+      "luxury3.jpg",
+      "luxury2.jpg",
+      "luxury1.jpg",
       "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
     ],
     description: "Indulge in 5-star comfort and exclusive experiences.",
@@ -73,6 +90,9 @@ const tripTypes = [
     id: "beach-holidays",
     title: "Beach Holidays",
     images: [
+      "beach1.jpg",
+      "beach2.jpg",
+      "beach3.jpg",
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
     ],
     description: "Relax on Kenya’s stunning coastline.",
@@ -83,6 +103,9 @@ const tripTypes = [
     id: "welness-retreats",
     title: "Wellness Retreats",
     images: [
+      "wellness1.jpg",
+      "wellness2.png",
+      "wellness3.png",
       "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
     ],
     description: "Rejuvenate your mind and body in serene settings.",
@@ -93,6 +116,9 @@ const tripTypes = [
     id:"culinary-tours",
     title: "Culinary Tours",
     images: [
+      "culinary3.jpg",
+      "culinary2.jpg",
+      "culinary1.jpg",
       "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
     ],
     description: "Taste the best of Kenyan and international cuisine.",

@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 
 import destinations from "../utils/Destinations";
-import { Group, OneK } from "@mui/icons-material";
+import { Group, Spa} from "@mui/icons-material";
 
 function DestinationsPage() {
   return (
@@ -104,6 +104,7 @@ function DestinationsPage() {
                     color="primary"
                     variant="filled"
                     size="medium"
+                    sx={{borderRadius: '.5rem'}}
                   />
 
                   <Chip
@@ -111,7 +112,8 @@ function DestinationsPage() {
                     color="secondary"
                     variant="filled"
                     size="medium"
-                    avatar={<OneK />}
+                    avatar={<Spa />}
+                    sx={{borderRadius: '.4rem'}}
                   />
                   <CardActions
                     sx={{
