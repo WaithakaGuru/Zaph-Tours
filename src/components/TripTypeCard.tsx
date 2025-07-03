@@ -22,16 +22,16 @@ type TripeType = {
 
 function TripTypeCard(tripInfo: TripeType) {
   const [bgImgIndex, setBgImageIndex] = useState(0);
-  // const [fade, setFade] = useState(true);
+  const [fade, setFade] = useState(true);
 
   useEffect(() => {
     const changeBgImageInterval = setInterval(() => {
-      // setFade(true);
-      // setTimeout(() => {
-        setBgImageIndex((idx) => (idx + 1) % tripInfo.images.length);
-        // setFade(true);
-      // }, 800);
-    }, 12000);
+      setFade(false);
+      setTimeout(() => {
+        setBgImageIndex(prev => (prev + 1) % (tripInfo.images.length-1));
+        setFade(true);
+      }, 800);
+    }, 10000);
 
     return () => clearInterval(changeBgImageInterval);
   }, []);
@@ -44,7 +44,7 @@ function TripTypeCard(tripInfo: TripeType) {
         id={tripInfo.id}
         sx={{
           transition: "background-image 0s, opacity 1s",
-          // opacity: fade ? 1 : 0,
+          opacity: fade ? 1 : 0,
           p: 4,
           width: '100%',
           backgroundImage: `url(${tripInfo.images[bgImgIndex]})`,
