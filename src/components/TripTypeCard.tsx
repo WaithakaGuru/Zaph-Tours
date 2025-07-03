@@ -83,7 +83,7 @@ function TripTypeCard(tripInfo: TripeType) {
           adipisicing elit. Quos mollitia architecto consequatur voluptate saepe
           dicta nesciunt quaerat, sequi iure beatae?
         </Typography>
-        <Stack direction={"row"} spacing={2} mt={4}>
+        <Stack direction={{ xs:'column', md: "row"}} spacing={2} mt={4}>
           <Chip
             label={`Price: Kes ${tripInfo.price}`}
             variant="filled"
