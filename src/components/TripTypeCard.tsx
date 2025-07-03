@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 
 type TripeType = {
+  id: string;
   title: string;
   description: string;
   images: string[];
@@ -19,7 +20,7 @@ type TripeType = {
 
 function TripTypeCard(tripInfo: TripeType) {
   return (
-    <Paper elevation={0} sx={{ my: 4 }}>
+    <Paper elevation={0} component={'section'} id={tripInfo.id}>
       <CardMedia component={"img"} image={tripInfo.images[0]} />
       <SkipNextRounded />
       <SkipPreviousRounded />

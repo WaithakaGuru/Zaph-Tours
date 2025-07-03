@@ -1,5 +1,6 @@
 const tripTypes = [
   {
+    id: "honeymoon",
     title: "Honeymoon",
     images: [
       "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
@@ -9,6 +10,7 @@ const tripTypes = [
     offer: "10% off for early bookings",
   },
   {
+    id: "family",
     title: "Family",
     images: [
       "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80",
@@ -18,6 +20,7 @@ const tripTypes = [
     offer: "Kids under 5 go free",
   },
   {
+    id: "adventure",
     title: "Adventure",
     images: [
       "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80",
@@ -27,6 +30,7 @@ const tripTypes = [
     offer: "Includes free gear rental",
   },
   {
+    id: "cultural-tours",
     title: "Cultural Tours",
     images: [
       "https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80",
@@ -36,6 +40,7 @@ const tripTypes = [
     offer: "Guided by local experts",
   },
   {
+    id: "wildlife-safaris",
     title: "Wildlife Safaris",
     images: [
       "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
@@ -45,6 +50,7 @@ const tripTypes = [
     offer: "Private jeep upgrade",
   },
   {
+    id: "eco-tours",
     title: "Eco-Tours",
     images: [
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
@@ -54,6 +60,7 @@ const tripTypes = [
     offer: "Plant a tree with every booking",
   },
   {
+    id: "luxury-vacations",
     title: "Luxury Vacations",
     images: [
       "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
@@ -63,6 +70,7 @@ const tripTypes = [
     offer: "Complimentary spa treatment",
   },
   {
+    id: "beach-holidays",
     title: "Beach Holidays",
     images: [
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
@@ -72,6 +80,7 @@ const tripTypes = [
     offer: "Free snorkeling tour",
   },
   {
+    id: "welness-retreats",
     title: "Wellness Retreats",
     images: [
       "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
@@ -81,6 +90,7 @@ const tripTypes = [
     offer: "Yoga sessions included",
   },
   {
+    id:"culinary-tours",
     title: "Culinary Tours",
     images: [
       "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",

@@ -16,16 +16,16 @@ import { Container, Typography, Box, Link, Chip, Stack } from "@mui/material";
 
 function TripTypesPage() {
   const tourPackages = [
-    { label: "Luxury Vacations", icon: <Star /> },
-    { label: "Adventure", icon: <Terrain /> },
-    { label: "Cultural Tours", icon: <Museum /> },
-    { label: "Honeymoon", icon: <Favorite /> },
-    { label: "eco-tours", icon: <Spoke /> },
-    { label: "Wildlife safaris", icon: <Pets /> },
-    { label: "Wellness retreats", icon: <Spa /> },
-    { label: "family", icon: <FamilyRestroom /> },
-    { label: "Beach Holidays", icon: <BeachAccess /> },
-    { label: "Culinary tours", icon: <Restaurant /> },
+    { label: "Luxury Vacations", icon: <Star />, id: "luxury-vacations"},
+    { label: "Adventure", icon: <Terrain />, id: "adventure"},
+    { label: "Cultural Tours", icon: <Museum />, id: "cultural-tours"},
+    { label: "Honeymoon", icon: <Favorite />, id: "honeymoon"},
+    { label: "eco-tours", icon: <Spoke />, id: "eco-tours"},
+    { label: "Wildlife safaris", icon: <Pets />, id: "wildlife-safaris"},
+    { label: "Wellness retreats", icon: <Spa />, id: "wellness-retreats"},
+    { label: "family", icon: <FamilyRestroom />, id: "family"},
+    { label: "Beach Holidays", icon: <BeachAccess />, id: "beach-holidays" },
+    { label: "Culinary tours", icon: <Restaurant />, id: "culinary-tours"},
   ];
   const colors = [
     "primary",
@@ -78,26 +78,25 @@ function TripTypesPage() {
         direction={"row"}
         mb={2}
         mt={4}
+        py={1}
         maxWidth={"100%"}
         flexWrap={"wrap"}
         justifyContent={"center"}
         position={"sticky"}
-        bgcolor="color-mix(in srgb, 20% white, 80%rgb(189, 249, 211) )"
+        bgcolor="color-mix(in srgb, 20% white, 80%rgb(252, 242, 204) )"
         mx={"auto"}
         zIndex={5}
+        top={'4rem'}
         sx={{
-          top: {
-            xs: '3.5rem', md: '6.5rem'
-          },
           px:{
-             sm: '5%',  md: 'auto'}
+             sm: '5%',  md: '10%'}
         }}
       >
         {tourPackages.map((tour, idx) => (
-          <Link href="#" key={idx} order={"revert-layer"}>
+          <Link href={tour.id} key={idx} order={"revert-layer"}>
             <Chip
               label={tour.label}
-              sx={{ m: 1 }}
+              sx={{ mx: 1, my: '5px', fontSize: '1rem', fontFamily: 'Monteserrat'}}
               size="medium"
               variant={(idx%2 ===0)?  'outlined' : 'filled'}
               icon={tour.icon}
@@ -125,7 +124,7 @@ function TripTypesPage() {
         sx={{ bgcolor: "#f9f9f9", p: 2 }}
       >
         {tripTypes.map((tripType) => (
-          <TripTypeCard {...tripType} key={tripType.title} />
+          <TripTypeCard {...tripType} key={tripType.id} />
         ))}
       </Box>
     </Container>
