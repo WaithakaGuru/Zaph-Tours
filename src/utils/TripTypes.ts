@@ -1,5 +1,19 @@
 const tripTypes = [
   {
+    id: "wildlife-safaris",
+    title: "Wildlife Safaris",
+    images: [
+      "safari1.jpg",
+      "safari2.jpg",
+      "wildlife1.jpg",
+      "wildlife2.jpg",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+    ],
+    description: "See the Big Five and more in their natural habitat.",
+    price: "KES 250,000",
+    offer: "Private jeep upgrade",
+  },
+  {
     id: "honeymoon",
     title: "Honeymoon",
     images: [
@@ -50,20 +64,6 @@ const tripTypes = [
     offer: "Guided by local experts",
   },
   {
-    id: "wildlife-safaris",
-    title: "Wildlife Safaris",
-    images: [
-      "safari1.jpg",
-      "safari2.jpg",
-      "wildlife1.jpg",
-      "wildlife2.jpg",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
-    ],
-    description: "See the Big Five and more in their natural habitat.",
-    price: "KES 250,000",
-    offer: "Private jeep upgrade",
-  },
-  {
     id: "eco-tours",
     title: "Eco-Tours",
     images: [
@@ -78,12 +78,7 @@ const tripTypes = [
   {
     id: "luxury-vacations",
     title: "Luxury Vacations",
-    images: [
-      "luxury3.jpg",
-      "luxury2.jpg",
-      "luxury1.jpg",
-      "honeymoon2.jpg",
-    ],
+    images: ["luxury3.jpg", "luxury2.jpg", "luxury1.jpg", "honeymoon2.jpg"],
     description: "Indulge in 5-star comfort and exclusive experiences.",
     price: "KES 400,000",
     offer: "Complimentary spa treatment",

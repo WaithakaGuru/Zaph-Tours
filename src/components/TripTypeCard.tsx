@@ -6,6 +6,7 @@ import {
   Card,
   Container,
   Stack,
+  Chip,
 } from "@mui/material";
 import Overlay from "./Overlay";
 import { useEffect, useState } from "react";
@@ -29,20 +30,20 @@ function TripTypeCard(tripInfo: TripeType) {
       setTimeout(() => {
         setBgImageIndex((idx) => (idx + 1) % tripInfo.images.length);
         setFade(true);
-      }, 700);
-    }, 8000);
+      }, 800);
+    }, 12000);
 
     return () => clearInterval(changeBgImageInterval);
-  }, [tripInfo.images.length]);
+  }, []);
 
   return (
-    <Container sx={{ml: { md: '-1rem'}}}>
+    <Container sx={{ ml: { md: "-1rem" } }}>
       <Paper
         elevation={0}
         component={"section"}
         id={tripInfo.id}
-        sx={{   
-          transition: "background-image 0s, opacity 0.7s", 
+        sx={{
+          transition: "background-image 0s, opacity 1s",
           opacity: fade ? 1 : 0,
           p: 4,
           width: "80dvw",
@@ -57,7 +58,7 @@ function TripTypeCard(tripInfo: TripeType) {
       >
         <Typography
           variant="h4"
-          color="textPrimary"
+          color="textDisabled"
           mx={2}
           sx={{ textShadow: "0 0 2px darkorange" }}
           fontWeight={600}
@@ -80,8 +81,19 @@ function TripTypeCard(tripInfo: TripeType) {
           adipisicing elit. Quos mollitia architecto consequatur voluptate saepe
           dicta nesciunt quaerat, sequi iure beatae?
         </Typography>
-        <Stack>
-          
+        <Stack direction={"row"} spacing={2} mt={4}>
+          <Chip
+            label={`Price: Kes ${tripInfo.price}`}
+            variant="filled"
+            color="info"
+            sx={{ my: 2, fontSize: "1rem" }}
+          />
+          <Chip
+            label={`Offer: ${tripInfo.offer}`}
+            variant="filled"
+            color="warning"
+            sx={{ my: 2, fontSize: "1rem", fontWeight: 600 }}
+          />
         </Stack>
         <Overlay />
       </Paper>

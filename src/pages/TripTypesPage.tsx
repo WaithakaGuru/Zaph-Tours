@@ -14,7 +14,7 @@ import {
   BeachAccess,
   Restaurant,
 } from "@mui/icons-material";
-import {orange } from "@mui/material/colors";
+import { orange } from "@mui/material/colors";
 
 function TripTypesPage() {
   const [currentTripTypeIdx, setCurrentTripTypeIdx] = useState(0);
@@ -41,7 +41,9 @@ function TripTypesPage() {
   ];
 
   function handleSelectTripType(e: React.MouseEvent<HTMLButtonElement>) {
-    const selectedTriptypeIndex =  tripTypes.findIndex(tripType => tripType.id == e.currentTarget.id)
+    const selectedTriptypeIndex = tripTypes.findIndex(
+      (tripType) => tripType.id == e.currentTarget.id,
+    );
     setCurrentTripTypeIdx(selectedTriptypeIndex);
   }
 
@@ -111,10 +113,14 @@ function TripTypesPage() {
             id={tour.id}
             key={idx}
             sx={{
-              border: (tour.id === tripTypes[currentTripTypeIdx].id) ?  `.2rem solid ${orange[600]}` : 'none' ,
+              border:
+                tour.id === tripTypes[currentTripTypeIdx].id
+                  ? `.2rem solid ${orange[600]}`
+                  : "none",
               textTransform: "capitalize",
-              p: '1px', m: 1,
-              borderRadius: '1rem',
+              p: "1px",
+              m: 1,
+              borderRadius: "1rem",
               "&:hover": {
                 scale: 1.1,
               },
