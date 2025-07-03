@@ -2,7 +2,7 @@ const destinations = [
   {
     name: "Mt. Kenya",
     image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80",
+      "mtKenya3.jpg",
     description:
       "Climb Africa’s second highest peak and enjoy breathtaking views.",
     groupPrice: "KES 120,000",
@@ -19,7 +19,7 @@ const destinations = [
   {
     name: "Lake Nakuru",
     image:
-      "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80",
+      "lkNakuru2.jpg",
     description:
       "Witness flamingos and rhinos in this world-famous national park.",
     groupPrice: "KES 80,000",

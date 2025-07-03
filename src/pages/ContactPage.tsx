@@ -1,4 +1,4 @@
-import { Email, Phone, Room } from "@mui/icons-material";
+import { Email, Facebook, LinkedIn, Phone, Room, WhatsApp, X, YouTube } from "@mui/icons-material";
 import {
   Button,
   Grid,
@@ -9,6 +9,7 @@ import {
   Stack,
   Divider,
   Container,
+  IconButton,
 } from "@mui/material";
 
 function ContactPage() {
@@ -32,6 +33,33 @@ function ContactPage() {
       >
         We're here to help and happy to hear from you
       </Typography>
+
+     <Paper sx={{maxWidth: {
+      sm: '72%'
+     }, mx: 'auto', p:2
+     }}>
+      <Typography variant="h6" gutterBottom align="center"
+      fontWeight={600} color="primary">
+        Zaph's Social Links
+      </Typography>
+        <Stack component={'div'} direction={'row'} justifyContent={'center'} gap={2}>
+          <IconButton color={'primary'} href="https://whatsapp.com">
+            <WhatsApp/>
+          </IconButton> 
+          <IconButton href="https://x.com">
+           <X sx={{color: "black"}} /> 
+          </IconButton> 
+          <IconButton href="https://linkedin.com">
+            <LinkedIn sx={{color: "rgb(0, 100, 220)"}}  />
+          </IconButton>
+          <IconButton href="htpps://youtube.com">
+            <YouTube sx={{color: "red"}} />
+          </IconButton>
+          <IconButton href="https://facebook.com">
+            <Facebook sx={{color: "rgb(0, 100, 220)"}} /> 
+          </IconButton> 
+        </Stack>
+     </Paper>
       <Grid container columns={3} justifyContent={"center"}>
         <Paper
           component={"form"}
@@ -44,6 +72,9 @@ function ContactPage() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-evenly",
+            minWidth: {
+              xs: "72%"
+            }
           }}
         >
           <Typography
@@ -97,66 +128,76 @@ function ContactPage() {
           sx={{
             p: 3,
             m: 2,
-            minWidth: "25rem",
+            // minWidth: "25rem",
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
+            minWidth: {
+              xs: "72%",
+            }
           }}
         >
-          <Typography variant="h5" fontWeight={600} color="primary">
-            Contact Information
-          </Typography>
-          <Box
-            component={"section"}
-            display={"flex"}
-            alignItems={"flex-start"}
-            flexDirection={"column"}
-          >
-            <Button
-              startIcon={<Email />}
-              href="mailto:info@zaphtours.com"
-              color="warning"
-              variant="text"
-              sx={{ textTransform: "lowercase" }}
+          <Stack gap={{xs: 0, sm: 4}} minWidth={{}} direction={
+            {
+              xs: "column",
+              sm: "row"
+            }
+          }>
+            <Box
+              component={"section"}
+              display={"flex"}
+              alignItems={"flex-start"}
+              flexDirection={"column"}
             >
-              info@zaphtours.com
-            </Button>
-            <Button
-              startIcon={<Phone />}
-              href="tel:0712234456"
-              color="warning"
-              sx={{ textTransform: "lowercase" }}
-            >
-              Call us on: +254-712-234-456
-            </Button>
-            <Typography
-              variant="subtitle2"
-              color="primary"
-              sx={{ display: "flex", justifyContent: "center", my: 1 }}
-            >
-              <Room />
-              Location: Nairobi, Kenya
-            </Typography>
-          </Box>
-          <Stack mt={2}>
-            <Typography
-              variant="body1"
-              fontWeight={600}
-              align="center"
-              color="secondary"
-              gutterBottom
-            >
-              We are open on:
-            </Typography>
-            <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-              Monday-Friday: 8:00am - 6:00pm
-            </Typography>
-            <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-              Sunday: 9:00am - 5:00pm
-            </Typography>
-            <Typography variant="subtitle1" color="textSecondary" gutterBottom>
-              Sat & Holidays: Closed
-            </Typography>
+              <Typography variant="h5" fontWeight={600} color="primary" gutterBottom>
+                Contact Information
+              </Typography>
+              <Button
+                startIcon={<Email />}
+                href="mailto:info@zaphtours.com"
+                color="warning"
+                variant="text"
+                sx={{ textTransform: "lowercase" }}
+              >
+                info@zaphtours.com
+              </Button>
+              <Button
+                startIcon={<Phone />}
+                href="tel:0712234456"
+                color="warning"
+                sx={{ textTransform: "lowercase" }}
+              >
+                Call us on: +254-712-234-456
+              </Button>
+              <Typography
+                variant="subtitle2"
+                color="primary"
+                sx={{ display: "flex", justifyContent: "center", my: 1 }}
+              >
+                <Room />
+                Location: Nairobi, Kenya
+              </Typography>
+            </Box>
+            <Stack mt={2}>
+              <Typography
+                variant="body1"
+                fontWeight={600}
+                align="left"
+                color="secondary"
+                gutterBottom
+              >
+                We are open on:
+              </Typography>
+              <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+                Monday-Friday: 8:00am - 6:00pm
+              </Typography>
+              <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+                Sunday: 9:00am - 5:00pm
+              </Typography>
+              <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+                Sat & Holidays: Closed
+              </Typography>
+            </Stack>
           </Stack>
           <Divider orientation="horizontal" flexItem></Divider>
           <Box component={"div"} my={3}>
@@ -173,7 +214,7 @@ function ContactPage() {
               src="https://www.openstreetmap.org/export/embed.html?bbox=36.8219%2C-1.2921%2C36.8219%2C-1.2921&amp;layer=mapnik"
               allowFullScreen
               loading="lazy"
-              style={{ border: 0, width: "100%", height: "100%" }}
+              style={{ border: 0, width: "24rem", height: "100%" }}
             />
           </Box>
         </Paper>

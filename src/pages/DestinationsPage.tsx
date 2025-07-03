@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 
 import destinations from "../utils/Destinations";
-import { Group, Spa} from "@mui/icons-material";
+import { Group, Face} from "@mui/icons-material";
 
 function DestinationsPage() {
   return (
@@ -112,7 +112,7 @@ function DestinationsPage() {
                     color="secondary"
                     variant="filled"
                     size="medium"
-                    avatar={<Spa />}
+                    avatar={<Face/>}
                     sx={{borderRadius: '.4rem'}}
                   />
                   <CardActions

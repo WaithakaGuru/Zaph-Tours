@@ -15,6 +15,9 @@ import { Container, Typography, Box, Chip, Stack, Button } from "@mui/material";
 } from "@mui/icons-material";
 
 function TripTypesPage() {
+  // const [currentTripImageIdx, setCurrentTripImageIdx] = useState(0);
+
+
   const tourPackages = [
     { label: "Luxury Vacations", icon: <Star />, id: "luxury-vacations"},
     { label: "Adventure", icon: <Terrain />, id: "adventure"},
