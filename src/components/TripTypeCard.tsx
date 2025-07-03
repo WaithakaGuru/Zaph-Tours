@@ -83,18 +83,18 @@ function TripTypeCard(tripInfo: TripeType) {
           adipisicing elit. Quos mollitia architecto consequatur voluptate saepe
           dicta nesciunt quaerat, sequi iure beatae?
         </Typography>
-        <Stack direction={{ xs:'column', md: "row"}} spacing={2} mt={4}>
+        <Stack direction={{ xs:'column', md: "row"}} width={'70%'} spacing={2} mt={4}>
           <Chip
             label={`Price: Kes ${tripInfo.price}`}
             variant="filled"
             color="info"
-            sx={{ my: 2, fontSize: "1rem" }}
+            sx={{ my: 2, fontSize: "1rem", width: '70%', py: 3}}
           />
           <Chip
             label={`Offer: ${tripInfo.offer}`}
             variant="filled"
             color="warning"
-            sx={{ my: 2, fontSize: "1rem", fontWeight: 600 }}
+            sx={{ my: 2, fontSize: "1rem", fontWeight: 600, width: '70%', py:3 }}
           />
         </Stack>
         <Overlay />
