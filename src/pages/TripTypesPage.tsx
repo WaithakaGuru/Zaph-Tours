@@ -136,9 +136,9 @@ function TripTypesPage() {
         gridTemplateColumns={{ xs: "1fr", sm: "1fr 1fr", md: "1fr 1fr 1fr" }}
         sx={{ bgcolor: "#f9f9f9", p: 2 }}
       >
-        {tripTypes.map((tripType) => (
-          <TripTypeCard {...tripType} key={tripType.id} />
-        ))}
+        {/* {tripTypes.map((tripType) => ( */}
+        <TripTypeCard {...tripTypes[0]} />
+        {/* ))} */}
       </Box>
     </Container>
   );

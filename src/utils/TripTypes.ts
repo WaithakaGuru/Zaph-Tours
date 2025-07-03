@@ -3,10 +3,10 @@ const tripTypes = [
     id: "honeymoon",
     title: "Honeymoon",
     images: [
-      "./honeymoon1.png",
-      "./honeymoon2.png",
-      "./honeymoon3.png",
       "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
+      "./honeymoon2.png",
+      "./honeymoon1.png",
+      "./honeymoon3.png",
     ],
     description: "Romantic getaways for newlyweds in breathtaking locations.",
     price: "KES 200,000",
@@ -41,6 +41,8 @@ const tripTypes = [
     id: "cultural-tours",
     title: "Cultural Tours",
     images: [
+      "cultural1.jpg",
+      "cultural3.jpg",
       "https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80",
     ],
     description: "Immerse yourself in Kenya’s rich culture and heritage.",
