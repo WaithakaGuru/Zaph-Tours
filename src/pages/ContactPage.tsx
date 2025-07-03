@@ -52,6 +52,7 @@ function ContactPage() {
           p: 2,
           minWidth: {
             xs: "100%",
+            md: '70%'
           },
         }}
       >
@@ -101,6 +102,7 @@ function ContactPage() {
             justifyContent: "space-evenly",
             minWidth: {
               xs: "100%",
+              md: '70%'
             },
           }}
         >
@@ -157,6 +159,7 @@ function ContactPage() {
             m: 2,
             minWidth: {
               xs: "100%",
+              md: '70%'
             },
             display: "flex",
             alignItems: "center",
