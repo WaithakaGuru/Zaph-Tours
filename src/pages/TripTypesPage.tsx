@@ -39,7 +39,7 @@ function TripTypesPage() {
     "default",
   ];
   return (
-    <Container sx={{ width: "100vw", justifyContent: "center" }}>
+    <Container sx={{ width: "100%", justifyContent: "center" }}>
       <Typography
         variant="body1"
         my={3}
@@ -85,13 +85,13 @@ function TripTypesPage() {
         flexWrap={"wrap"}
         justifyContent={"center"}
         position={"sticky"}
-        bgcolor="color-mix(in srgb, 20% white, 80%rgb(215, 255, 244))"
+        bgcolor="color-mix(in srgb, 20% white, 80%rgb(221, 221, 221))"
         mx={"auto"}
         zIndex={5}
         top={"4rem"}
         sx={{
           transition: "scale .4s",
-          boxShadow: "0 0 .5rem rgb(97, 199, 206)",
+          boxShadow: "0 0 .5rem rgb(203, 250, 254)",
           px: {
             sm: "5%",
             md: "10%",
