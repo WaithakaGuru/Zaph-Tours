@@ -1,4 +1,13 @@
-import { Email, Facebook, LinkedIn, Phone, Room, WhatsApp, X, YouTube } from "@mui/icons-material";
+import {
+  Email,
+  Facebook,
+  LinkedIn,
+  Phone,
+  Room,
+  WhatsApp,
+  X,
+  YouTube,
+} from "@mui/icons-material";
 import {
   Button,
   Grid,
@@ -34,32 +43,50 @@ function ContactPage() {
         We're here to help and happy to hear from you
       </Typography>
 
-     <Paper sx={{maxWidth: {
-      sm: '72%'
-     }, mx: 'auto', p:2
-     }}>
-      <Typography variant="h6" gutterBottom align="center"
-      fontWeight={600} color="primary">
-        Zaph's Social Links
-      </Typography>
-        <Stack component={'div'} direction={'row'} justifyContent={'center'} gap={2}>
-          <IconButton color={'primary'} href="https://whatsapp.com">
-            <WhatsApp/>
-          </IconButton> 
+      <Paper
+        sx={{
+          maxWidth: {
+            xs: "72%",
+          },
+          mx: "auto",
+          p: 2,
+          minWidth: {
+            xs: "25rem",
+          },
+        }}
+      >
+        <Typography
+          variant="h6"
+          gutterBottom
+          align="center"
+          fontWeight={600}
+          color="primary"
+        >
+          Zaph's Social Links
+        </Typography>
+        <Stack
+          component={"div"}
+          direction={"row"}
+          justifyContent={"center"}
+          gap={2}
+        >
+          <IconButton color={"primary"} href="https://whatsapp.com">
+            <WhatsApp />
+          </IconButton>
           <IconButton href="https://x.com">
-           <X sx={{color: "black"}} /> 
-          </IconButton> 
+            <X sx={{ color: "black" }} />
+          </IconButton>
           <IconButton href="https://linkedin.com">
-            <LinkedIn sx={{color: "rgb(0, 100, 220)"}}  />
+            <LinkedIn sx={{ color: "rgb(0, 100, 220)" }} />
           </IconButton>
           <IconButton href="htpps://youtube.com">
-            <YouTube sx={{color: "red"}} />
+            <YouTube sx={{ color: "red" }} />
           </IconButton>
           <IconButton href="https://facebook.com">
-            <Facebook sx={{color: "rgb(0, 100, 220)"}} /> 
-          </IconButton> 
+            <Facebook sx={{ color: "rgb(0, 100, 220)" }} />
+          </IconButton>
         </Stack>
-     </Paper>
+      </Paper>
       <Grid container columns={3} justifyContent={"center"}>
         <Paper
           component={"form"}
@@ -73,8 +100,8 @@ function ContactPage() {
             flexDirection: "column",
             justifyContent: "space-evenly",
             minWidth: {
-              xs: "72%"
-            }
+              xs: "72%",
+            },
           }}
         >
           <Typography
@@ -128,28 +155,37 @@ function ContactPage() {
           sx={{
             p: 3,
             m: 2,
-            // minWidth: "25rem",
+            minWidth: {
+              xs: "25rem",
+            },
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
-            minWidth: {
+            maxWidth: {
               xs: "72%",
-            }
+            },
           }}
         >
-          <Stack gap={{xs: 0, sm: 4}} minWidth={{}} direction={
-            {
+          <Stack
+            gap={{ xs: 0, sm: 4 }}
+            minWidth={{}}
+            direction={{
               xs: "column",
-              sm: "row"
-            }
-          }>
+              sm: "row",
+            }}
+          >
             <Box
               component={"section"}
               display={"flex"}
               alignItems={"flex-start"}
               flexDirection={"column"}
             >
-              <Typography variant="h5" fontWeight={600} color="primary" gutterBottom>
+              <Typography
+                variant="h5"
+                fontWeight={600}
+                color="primary"
+                gutterBottom
+              >
                 Contact Information
               </Typography>
               <Button
@@ -188,13 +224,25 @@ function ContactPage() {
               >
                 We are open on:
               </Typography>
-              <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+              <Typography
+                variant="subtitle1"
+                color="textSecondary"
+                gutterBottom
+              >
                 Monday-Friday: 8:00am - 6:00pm
               </Typography>
-              <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+              <Typography
+                variant="subtitle1"
+                color="textSecondary"
+                gutterBottom
+              >
                 Sunday: 9:00am - 5:00pm
               </Typography>
-              <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+              <Typography
+                variant="subtitle1"
+                color="textSecondary"
+                gutterBottom
+              >
                 Sat & Holidays: Closed
               </Typography>
             </Stack>

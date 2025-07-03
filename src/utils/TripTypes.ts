@@ -113,7 +113,7 @@ const tripTypes = [
     offer: "Yoga sessions included",
   },
   {
-    id:"culinary-tours",
+    id: "culinary-tours",
     title: "Culinary Tours",
     images: [
       "culinary3.jpg",

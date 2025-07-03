@@ -1,9 +1,5 @@
 import { SkipNextRounded, SkipPreviousRounded } from "@mui/icons-material";
-import {
-  CardMedia,
-  Paper,
-  Typography,
-} from "@mui/material";
+import { CardMedia, Paper, Typography } from "@mui/material";
 
 type TripeType = {
   id: string;
@@ -16,7 +12,7 @@ type TripeType = {
 
 function TripTypeCard(tripInfo: TripeType) {
   return (
-    <Paper elevation={0} component={'section'} id={tripInfo.id}>
+    <Paper elevation={0} component={"section"} id={tripInfo.id}>
       <CardMedia component={"img"} image={tripInfo.images[0]} />
       <SkipPreviousRounded />
       <SkipNextRounded />
