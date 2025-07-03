@@ -73,7 +73,9 @@ function TripTypeCard(tripInfo: TripeType) {
           color="#eee"
           fontWeight={500}
           fontSize={"1rem"}
-          maxWidth={"50%"}
+          maxWidth={
+            {md: '50%', xs: '90%'}
+          }
           position={"relative"}
           zIndex={2}
         >
