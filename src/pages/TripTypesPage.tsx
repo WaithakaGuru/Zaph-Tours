@@ -97,7 +97,7 @@ function TripTypesPage() {
           bgcolor="#f9f9f9"
           mx={"auto"}
           zIndex={5}
-          top={{xs: '-4rem', md: '-2rem'}}
+          top={{xs: '-6rem', md: '-2rem'}}
           sx={{
             transition: "scale .4s",
             boxShadow: "0 0 .5rem rgba(0, 0, 0, .2)",

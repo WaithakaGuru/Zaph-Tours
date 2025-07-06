@@ -60,7 +60,7 @@ function TripTypeCard(tripInfo: TripeType) {
           variant="h4"
           color="textDisabled"
           mx={2}
-          sx={{ textShadow: "0 0 2px darkorange" }}
+          sx={{ textShadow: "0 0 4px #333" }}
           fontWeight={600}
           fontStyle={"italic"}
           position={"relative"}
@@ -78,6 +78,7 @@ function TripTypeCard(tripInfo: TripeType) {
           }
           position={"relative"}
           zIndex={2}
+          sx={{textShadow: "0 0 1px darkslateblue" }}
         >
           {tripInfo.description} Lorem ipsum dolor sit, amet consectetur
           adipisicing elit. Quos mollitia architecto consequatur voluptate saepe
