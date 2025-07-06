@@ -85,66 +85,67 @@ function TripTypesPage() {
           Insane Offers Available
         </Typography>
       </Typography>
-      <Stack
-        direction={"row"}
-        mb={2}
-        mt={2}
-        py={1}
-        maxWidth={"100%"}
-        flexWrap={"wrap"}
-        justifyContent={"center"}
-        position={"sticky"}
-        bgcolor="#f9f9f9"
-        mx={"auto"}
-        zIndex={5}
-        top={"4rem"}
-        sx={{
-          transition: "scale .4s",
-          boxShadow: "0 0 .5rem rgba(0, 0, 0, .2)",
-          px: {
-            sm: "5%",
-            md: "10%",
-          },
-        }}
-      >
-        {tourPackages.map((tour, idx) => (
-          <Button
-            onClick={handleSelectTripType}
-            id={tour.id}
-            key={idx}
-            sx={{
-              border:
-                tour.id === tripTypes[currentTripTypeIdx].id
-                  ? `.2rem solid ${orange[600]}`
-                  : "none",
-              textTransform: "capitalize",
-              p: "1px",
-              m: 1,
-              borderRadius: "1rem",
-              "&:hover": {
-                scale: 1.1,
-              },
-            }}
-          >
-            <Chip
-              label={tour.label}
-              size="medium"
-              variant={idx % 2 === 0 ? "outlined" : "filled"}
-              icon={tour.icon}
-              color={
-                colors[idx % colors.length] as
-                  | "primary"
-                  | "secondary"
-                  | "success"
-                  | "info"
-                  | "error"
-                  | "warning"
-                  | "default"
-              }
-            />
-          </Button>
-        ))}
-      </Stack>
+        <Stack
+          direction={"row"}
+          mb={2}
+          mt={2}
+          py={1}
+          maxWidth={"100%"}
+          flexWrap={"wrap"}
+          justifyContent={"center"}
+          position={"sticky"}
+          bgcolor="#f9f9f9"
+          mx={"auto"}
+          zIndex={5}
+          top={{xs: '-4rem', md: '-2rem'}}
+          sx={{
+            transition: "scale .4s",
+            boxShadow: "0 0 .5rem rgba(0, 0, 0, .2)",
+            px: {
+              sm: "5%",
+              md: "10%",
+            },
+          }}
+        >
+          <Typography variant="overline" display={'block'} width={'100%'} py={0}  align="center" color="secondary">Select a Trip packages to see its details</Typography>
+          {tourPackages.map((tour, idx) => (
+            <Button
+              onClick={handleSelectTripType}
+              id={tour.id}
+              key={idx}
+              sx={{
+                border:
+                  tour.id === tripTypes[currentTripTypeIdx].id
+                    ? `.2rem solid ${orange[600]}`
+                    : "none",
+                textTransform: "capitalize",
+                p: "1px",
+                m: 1,
+                borderRadius: "1rem",
+                "&:hover": {
+                  scale: 1.1,
+                },
+              }}
+            >
+              <Chip
+                label={tour.label}
+                size="medium"
+                variant={idx % 2 === 0 ? "outlined" : "filled"}
+                icon={tour.icon}
+                color={
+                  colors[idx % colors.length] as
+                    | "primary"
+                    | "secondary"
+                    | "success"
+                    | "info"
+                    | "error"
+                    | "warning"
+                    | "default"
+                }
+              />
+            </Button>
+          ))}
+        </Stack>
 
       {/*  */}
 
@@ -152,7 +153,7 @@ function TripTypesPage() {
         display={"grid"}
         gap={3}
         gridTemplateColumns={{ xs: "1fr", sm: "1fr 1fr", md: "1fr 1fr 1fr" }}
-        sx={{ bgcolor: "#f9f9f9", p: 2 }}
+        sx={{ bgcolor: "#f9f9f9", p: 2, ml: '-.5rem' }}
       >
         <TripTypeCard {...tripTypes[currentTripTypeIdx]} />
       </Box>

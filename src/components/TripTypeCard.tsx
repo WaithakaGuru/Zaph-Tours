@@ -43,8 +43,8 @@ function TripTypeCard(tripInfo: TripeType) {
         component={"section"}
         id={tripInfo.id}
         sx={{
-          transition: "background-image 0s, opacity 1s",
-          opacity: fade ? 1 : 0,
+          transition: "background-image .7s, opacity 1s",
+          opacity: fade ? 1 : 0.1,
           p: 4,
           width: '100%',
           backgroundImage: `url(${tripInfo.images[bgImgIndex]})`,
