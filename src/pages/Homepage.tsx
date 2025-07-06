@@ -98,7 +98,8 @@ function Homepage() {
             mx: "auto",
             minWidth: "26rem",
             alignItems: "center",
-            height: "45dvh",
+            height: "max-content",
+            pb: 2,
             boxShadow: "0 0 .5rem rgba(0,0,0,0.4), -1px -1px .5rem #fff",
           }}
         >
@@ -120,9 +121,13 @@ function Homepage() {
             elevation={2}
             sx={{
               bgcolor: "#fff",
-              p: 4,
+              p: {
+                xs: 2,
+                md: 4
+              },
               minWidth: {
-                xs: "30rem",
+                xs: "max-content",
+                md: "50%"
               },
             }}
           >
@@ -132,6 +137,7 @@ function Homepage() {
               gutterBottom
               color="text.primary"
               align="center"
+              sx={{textWrap: 'nowrap'}}
             >
               Subscribe to Our Newsletter
             </Typography>
@@ -147,13 +153,13 @@ function Homepage() {
             <Box
               display={"flex"}
               justifyContent={"center"}
-              sx={{ gap: 1, p: 2 }}
+              sx={{ gap: 1, py: 4, px: 2}}
             >
               <TextField
                 label="Email address"
                 placeholder="Enter your email address"
-                sx={{ minWidth: "20rem" }}
-              ></TextField>
+              sx={{  minWidth: {xs: "max-content", md: '65%'} }}
+              />
               <Button
                 variant="contained"
                 size="large"
